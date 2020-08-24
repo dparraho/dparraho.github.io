@@ -2,7 +2,7 @@
 layout: default
 ---
 ## Graficos
-1. [Catalogo de CC](https://github.com/dparraho/dparraho.github.io/blob/master/Catalogo_CC.html) 
+1. [Catalogo de CC](https://github.com/dparraho/dparraho.github.io/Catalogo_CC.html) 
 
 ## [ML](./DeepLearning) 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
