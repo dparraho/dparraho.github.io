@@ -114,7 +114,7 @@ end
 </div>
 
 <div>
-<iframe frameborder="0" src="https://dparraho.github.io/cuadritos" width="1500" height="600">
+<iframe frameborder="0" src="https://dparraho.github.io/cuadritos" width="750" height="1800">
 </iframe>
 </div>
 
