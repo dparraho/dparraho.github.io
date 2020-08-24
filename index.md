@@ -2,7 +2,18 @@
 layout: default
 ---
 ## Graficos
-1. [Catalogo de CC](https://dparraho.github.io/Catalogo_CC) 
+1. [Catalogo de CC](https://dparraho.github.io/Catalogo_CC)
+1. [Catalogo de Barbosa](https://dparraho.github.io/Catalogo_CC_Barbosa)
+1. [Catalogo de Bello](https://dparraho.github.io/Catalogo_CC_Bello)
+1. [Catalogo de Caldas](https://dparraho.github.io/Catalogo_CC_Caldas)
+1. [Catalogo de Copacabana](https://dparraho.github.io/Catalogo_CC_Copacabana)
+1. [Catalogo de Envigado](https://dparraho.github.io/Catalogo_CC_Envigado)
+1. [Catalogo de Estrella](https://dparraho.github.io/Catalogo_CC_Estrella)
+1. [Catalogo de Girardota](https://dparraho.github.io/Catalogo_CC_Girardota) 
+1. [Catalogo de Itagüí](https://dparraho.github.io/Catalogo_CC_Itagüí) 
+1. [Catalogo de Medellín](https://dparraho.github.io/Catalogo_CC_Medellín) 
+1. [Catalogo de Sabaneta(https://dparraho.github.io/Catalogo_CC_Sabaneta) 
+
 
 ## [ML](./DeepLearning) 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.

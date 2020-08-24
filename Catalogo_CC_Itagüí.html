@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_99f912b68a704f0e8bdeca413c65c5c0 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://rawcdn.githack.com/ardhi/Leaflet.MousePosition/c32f1c84/src/L.Control.MousePosition.js"></script>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/ardhi/Leaflet.MousePosition/c32f1c84/src/L.Control.MousePosition.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.2/leaflet.draw.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.2/leaflet.draw.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.css"/>
+    <script src="https://rawcdn.githack.com/ljagis/leaflet-measure/2.1.7/dist/leaflet-measure.js"></script>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/ljagis/leaflet-measure/2.1.7/dist/leaflet-measure.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_99f912b68a704f0e8bdeca413c65c5c0" ></div>
+        
+</body>
+<script>    
+    
+            var map_99f912b68a704f0e8bdeca413c65c5c0 = L.map(
+                "map_99f912b68a704f0e8bdeca413c65c5c0",
+                {
+                    center: [6.178802832054494, -75.61775942786602],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_99f912b68a704f0e8bdeca413c65c5c0);
+
+            
+
+        
+    
+            var tile_layer_23cf744f991b43d895b4afcf022f4b7d = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_99f912b68a704f0e8bdeca413c65c5c0);
+        
+    
+            var tile_layer_2a9ac694f1a2433cbddf5c49b08473c5 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_99f912b68a704f0e8bdeca413c65c5c0);
+        
+    
+            var tile_layer_27944a7f6812490eb963d0a3236b01c7 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}.jpg",
+                {"attribution": "World_Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_99f912b68a704f0e8bdeca413c65c5c0);
+        
+    
+            var tile_layer_9d4b09fedd4f4b0898d749019e6dda52 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}.jpg",
+                {"attribution": "World_Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_99f912b68a704f0e8bdeca413c65c5c0);
+        
+    
+            var feature_group_3a30bdd0c4c94eab97f8aab97fd6d69e = L.featureGroup(
+                {}
+            ).addTo(map_99f912b68a704f0e8bdeca413c65c5c0);
+        
+    
+            var marker_a6f1ece9af3c4f9f82d362750f0f85a8 = L.marker(
+                [6.16836, -75.61848],
+                {}
+            ).addTo(feature_group_3a30bdd0c4c94eab97f8aab97fd6d69e);
+        
+    
+            var icon_4b0f9cb2a721446bba99a6fc813ff19a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_a6f1ece9af3c4f9f82d362750f0f85a8.setIcon(icon_4b0f9cb2a721446bba99a6fc813ff19a);
+        
+    
+        var popup_d118cb4741f24b63b1672cbfd271bda4 = L.popup({"maxHeight": "500", "maxWidth": "500"});
+
+        
+            var html_4187b2df602f473ab3ad26fa9eb76735 = $(`<div id="html_4187b2df602f473ab3ad26fa9eb76735" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-bordered table-hover table-condensed">   <tbody>     <tr>       <th>NOMBRE</th>       <td>CC</td>     </tr>     <tr>       <th>PROMEDIO</th>       <td>24.6 $\mu g/m^3$</td>     </tr>     <tr>       <th>ALTURANI_1</th>       <td>2 m</td>     </tr>     <tr>       <th>ALTURANIVE</th>       <td>1606 msnm</td>     </tr>     <tr>       <th>CODIGOSERI</th>       <td>45</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_d118cb4741f24b63b1672cbfd271bda4.setContent(html_4187b2df602f473ab3ad26fa9eb76735);
+        
+
+        marker_a6f1ece9af3c4f9f82d362750f0f85a8.bindPopup(popup_d118cb4741f24b63b1672cbfd271bda4)
+        ;
+
+        
+    
+    
+            marker_a6f1ece9af3c4f9f82d362750f0f85a8.bindTooltip(
+                `<div>
+                     Nube 45
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_dc93966f7e4849aab82123fc16f4a74f = L.marker(
+                [6.165272960636077, -75.62915559858082],
+                {}
+            ).addTo(feature_group_3a30bdd0c4c94eab97f8aab97fd6d69e);
+        
+    
+            var icon_911e62b1b0d847638cb3e53462650f20 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_dc93966f7e4849aab82123fc16f4a74f.setIcon(icon_911e62b1b0d847638cb3e53462650f20);
+        
+    
+        var popup_f081939f8c5f476faf52fa8b473570b7 = L.popup({"maxHeight": "500", "maxWidth": "500"});
+
+        
+            var html_b8a7d1554d244a31b4e4393ca2b9dee1 = $(`<div id="html_b8a7d1554d244a31b4e4393ca2b9dee1" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-bordered table-hover table-condensed">   <tbody>     <tr>       <th>NOMBRE</th>       <td>CC</td>     </tr>     <tr>       <th>PROMEDIO</th>       <td>13.9 $\mu g/m^3$</td>     </tr>     <tr>       <th>ALTURANI_1</th>       <td>17 m</td>     </tr>     <tr>       <th>ALTURANIVE</th>       <td>1707 msnm</td>     </tr>     <tr>       <th>CODIGOSERI</th>       <td>167</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_f081939f8c5f476faf52fa8b473570b7.setContent(html_b8a7d1554d244a31b4e4393ca2b9dee1);
+        
+
+        marker_dc93966f7e4849aab82123fc16f4a74f.bindPopup(popup_f081939f8c5f476faf52fa8b473570b7)
+        ;
+
+        
+    
+    
+            marker_dc93966f7e4849aab82123fc16f4a74f.bindTooltip(
+                `<div>
+                     Nube 167
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d414e4504a704fe289ee9af237cdce08 = L.marker(
+                [6.16959, -75.62731],
+                {}
+            ).addTo(feature_group_3a30bdd0c4c94eab97f8aab97fd6d69e);
+        
+    
+            var icon_8dfdf9d90140454ca1074972968d7975 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_d414e4504a704fe289ee9af237cdce08.setIcon(icon_8dfdf9d90140454ca1074972968d7975);
+        
+    
+        var popup_ac8ab5149e504d14ad943510028e8cd0 = L.popup({"maxHeight": "500", "maxWidth": "500"});
+
+        
+            var html_64e3882150e04fe8a53650e9b57f7e7d = $(`<div id="html_64e3882150e04fe8a53650e9b57f7e7d" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-bordered table-hover table-condensed">   <tbody>     <tr>       <th>NOMBRE</th>       <td>CC</td>     </tr>     <tr>       <th>PROMEDIO</th>       <td>15.4 $\mu g/m^3$</td>     </tr>     <tr>       <th>ALTURANI_1</th>       <td>4 m</td>     </tr>     <tr>       <th>ALTURANIVE</th>       <td>1620 msnm</td>     </tr>     <tr>       <th>CODIGOSERI</th>       <td>228</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_ac8ab5149e504d14ad943510028e8cd0.setContent(html_64e3882150e04fe8a53650e9b57f7e7d);
+        
+
+        marker_d414e4504a704fe289ee9af237cdce08.bindPopup(popup_ac8ab5149e504d14ad943510028e8cd0)
+        ;
+
+        
+    
+    
+            marker_d414e4504a704fe289ee9af237cdce08.bindTooltip(
+                `<div>
+                     Nube 228
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_85c12234bc75482fbdec03f09b6e005b = L.marker(
+                [6.18965, -75.60385],
+                {}
+            ).addTo(feature_group_3a30bdd0c4c94eab97f8aab97fd6d69e);
+        
+    
+            var icon_7ed405c85f5d499f8006edd464dc744e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_85c12234bc75482fbdec03f09b6e005b.setIcon(icon_7ed405c85f5d499f8006edd464dc744e);
+        
+    
+        var popup_2cf6c2a074224643b701682a02d192de = L.popup({"maxHeight": "500", "maxWidth": "500"});
+
+        
+            var html_6b4e95d88d7b4875abd0c5ffac22473f = $(`<div id="html_6b4e95d88d7b4875abd0c5ffac22473f" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-bordered table-hover table-condensed">   <tbody>     <tr>       <th>NOMBRE</th>       <td>CC</td>     </tr>     <tr>       <th>PROMEDIO</th>       <td>32.8 $\mu g/m^3$</td>     </tr>     <tr>       <th>ALTURANI_1</th>       <td>38 m</td>     </tr>     <tr>       <th>ALTURANIVE</th>       <td>1619 msnm</td>     </tr>     <tr>       <th>CODIGOSERI</th>       <td>157</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_2cf6c2a074224643b701682a02d192de.setContent(html_6b4e95d88d7b4875abd0c5ffac22473f);
+        
+
+        marker_85c12234bc75482fbdec03f09b6e005b.bindPopup(popup_2cf6c2a074224643b701682a02d192de)
+        ;
+
+        
+    
+    
+            marker_85c12234bc75482fbdec03f09b6e005b.bindTooltip(
+                `<div>
+                     Nube 157
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f19b77a5e8fe4a398590c40d1557655a = L.marker(
+                [6.1569302, -75.62752890000002],
+                {}
+            ).addTo(feature_group_3a30bdd0c4c94eab97f8aab97fd6d69e);
+        
+    
+            var icon_ce4b92c4faeb465a80201bc9649d8d5f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_f19b77a5e8fe4a398590c40d1557655a.setIcon(icon_ce4b92c4faeb465a80201bc9649d8d5f);
+        
+    
+        var popup_8f633ae7f43b43c3ba4e8c317b528c4f = L.popup({"maxHeight": "500", "maxWidth": "500"});
+
+        
+            var html_bcd546ad6bd94983b6accf0857e21d98 = $(`<div id="html_bcd546ad6bd94983b6accf0857e21d98" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-bordered table-hover table-condensed">   <tbody>     <tr>       <th>NOMBRE</th>       <td>CC</td>     </tr>     <tr>       <th>PROMEDIO</th>       <td>22.2 $\mu g/m^3$</td>     </tr>     <tr>       <th>ALTURANI_1</th>       <td>4 m</td>     </tr>     <tr>       <th>ALTURANIVE</th>       <td>1569 msnm</td>     </tr>     <tr>       <th>CODIGOSERI</th>       <td>196</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_8f633ae7f43b43c3ba4e8c317b528c4f.setContent(html_bcd546ad6bd94983b6accf0857e21d98);
+        
+
+        marker_f19b77a5e8fe4a398590c40d1557655a.bindPopup(popup_8f633ae7f43b43c3ba4e8c317b528c4f)
+        ;
+
+        
+    
+    
+            marker_f19b77a5e8fe4a398590c40d1557655a.bindTooltip(
+                `<div>
+                     Nube 196
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_efc99e8371724367b2846aec07ccc5a0 = L.marker(
+                [6.186939420648285, -75.58699361979963],
+                {}
+            ).addTo(feature_group_3a30bdd0c4c94eab97f8aab97fd6d69e);
+        
+    
+            var icon_0411b8c04cba4568850858bb26cdd439 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_efc99e8371724367b2846aec07ccc5a0.setIcon(icon_0411b8c04cba4568850858bb26cdd439);
+        
+    
+        var popup_8a1b900e260b4857aaaaa527654deaa9 = L.popup({"maxHeight": "500", "maxWidth": "500"});
+
+        
+            var html_ac6532d3198540e3aa36de7d11e0b32d = $(`<div id="html_ac6532d3198540e3aa36de7d11e0b32d" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-bordered table-hover table-condensed">   <tbody>     <tr>       <th>NOMBRE</th>       <td>CC</td>     </tr>     <tr>       <th>PROMEDIO</th>       <td>19.2 $\mu g/m^3$</td>     </tr>     <tr>       <th>ALTURANI_1</th>       <td>1 m</td>     </tr>     <tr>       <th>ALTURANIVE</th>       <td>1543 msnm</td>     </tr>     <tr>       <th>CODIGOSERI</th>       <td>21</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_8a1b900e260b4857aaaaa527654deaa9.setContent(html_ac6532d3198540e3aa36de7d11e0b32d);
+        
+
+        marker_efc99e8371724367b2846aec07ccc5a0.bindPopup(popup_8a1b900e260b4857aaaaa527654deaa9)
+        ;
+
+        
+    
+    
+            marker_efc99e8371724367b2846aec07ccc5a0.bindTooltip(
+                `<div>
+                     Nube 21
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4acf0de255204f0793ad65ae657f86ce = L.marker(
+                [6.19023, -75.61144],
+                {}
+            ).addTo(feature_group_3a30bdd0c4c94eab97f8aab97fd6d69e);
+        
+    
+            var icon_0864ca7084564926a52ccb88b9e3d02c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_4acf0de255204f0793ad65ae657f86ce.setIcon(icon_0864ca7084564926a52ccb88b9e3d02c);
+        
+    
+        var popup_39c641e4136a4084b5638f06c3483519 = L.popup({"maxHeight": "500", "maxWidth": "500"});
+
+        
+            var html_14a9b655c9f445b6bb212ef22227f235 = $(`<div id="html_14a9b655c9f445b6bb212ef22227f235" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-bordered table-hover table-condensed">   <tbody>     <tr>       <th>NOMBRE</th>       <td>CC</td>     </tr>     <tr>       <th>PROMEDIO</th>       <td>17.4 $\mu g/m^3$</td>     </tr>     <tr>       <th>ALTURANI_1</th>       <td>7 m</td>     </tr>     <tr>       <th>ALTURANIVE</th>       <td>1730 msnm</td>     </tr>     <tr>       <th>CODIGOSERI</th>       <td>92</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_39c641e4136a4084b5638f06c3483519.setContent(html_14a9b655c9f445b6bb212ef22227f235);
+        
+
+        marker_4acf0de255204f0793ad65ae657f86ce.bindPopup(popup_39c641e4136a4084b5638f06c3483519)
+        ;
+
+        
+    
+    
+            marker_4acf0de255204f0793ad65ae657f86ce.bindTooltip(
+                `<div>
+                     Nube 92
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f0a7d00728944577a92e6a662702995d = L.marker(
+                [6.183632842873067, -75.59025518596174],
+                {}
+            ).addTo(feature_group_3a30bdd0c4c94eab97f8aab97fd6d69e);
+        
+    
+            var icon_d7903807fd704b9095d9cab786a899f7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_f0a7d00728944577a92e6a662702995d.setIcon(icon_d7903807fd704b9095d9cab786a899f7);
+        
+    
+        var popup_fad33526d6ad4619bd712a32a11f1229 = L.popup({"maxHeight": "500", "maxWidth": "500"});
+
+        
+            var html_3f59c14625e4432eab8463bc1ca03529 = $(`<div id="html_3f59c14625e4432eab8463bc1ca03529" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-bordered table-hover table-condensed">   <tbody>     <tr>       <th>NOMBRE</th>       <td>CC</td>     </tr>     <tr>       <th>PROMEDIO</th>       <td>22.5 $\mu g/m^3$</td>     </tr>     <tr>       <th>ALTURANI_1</th>       <td>6 m</td>     </tr>     <tr>       <th>ALTURANIVE</th>       <td>1548 msnm</td>     </tr>     <tr>       <th>CODIGOSERI</th>       <td>58</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_fad33526d6ad4619bd712a32a11f1229.setContent(html_3f59c14625e4432eab8463bc1ca03529);
+        
+
+        marker_f0a7d00728944577a92e6a662702995d.bindPopup(popup_fad33526d6ad4619bd712a32a11f1229)
+        ;
+
+        
+    
+    
+            marker_f0a7d00728944577a92e6a662702995d.bindTooltip(
+                `<div>
+                     Nube 58
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f266f421bdd944be9ea00d8ef341cb56 = L.marker(
+                [6.17902868978049, -75.60028125248208],
+                {}
+            ).addTo(feature_group_3a30bdd0c4c94eab97f8aab97fd6d69e);
+        
+    
+            var icon_103d3efe8043479fb54f8ee56e203a84 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_f266f421bdd944be9ea00d8ef341cb56.setIcon(icon_103d3efe8043479fb54f8ee56e203a84);
+        
+    
+        var popup_1899cf79b80c4e0daa45f857f17ce7b0 = L.popup({"maxHeight": "500", "maxWidth": "500"});
+
+        
+            var html_4411a5fbb0364c9ca0c85e9304ec3ffa = $(`<div id="html_4411a5fbb0364c9ca0c85e9304ec3ffa" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-bordered table-hover table-condensed">   <tbody>     <tr>       <th>NOMBRE</th>       <td>CC</td>     </tr>     <tr>       <th>PROMEDIO</th>       <td>16.8 $\mu g/m^3$</td>     </tr>     <tr>       <th>ALTURANI_1</th>       <td>6 m</td>     </tr>     <tr>       <th>ALTURANIVE</th>       <td>1562 msnm</td>     </tr>     <tr>       <th>CODIGOSERI</th>       <td>111</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_1899cf79b80c4e0daa45f857f17ce7b0.setContent(html_4411a5fbb0364c9ca0c85e9304ec3ffa);
+        
+
+        marker_f266f421bdd944be9ea00d8ef341cb56.bindPopup(popup_1899cf79b80c4e0daa45f857f17ce7b0)
+        ;
+
+        
+    
+    
+            marker_f266f421bdd944be9ea00d8ef341cb56.bindTooltip(
+                `<div>
+                     Nube 111
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3e49306b93bc4a2eb0558e7c5113e513 = L.marker(
+                [6.163374, -75.616667],
+                {}
+            ).addTo(feature_group_3a30bdd0c4c94eab97f8aab97fd6d69e);
+        
+    
+            var icon_ad3ca256ca414a23b8496193bd1434b2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_3e49306b93bc4a2eb0558e7c5113e513.setIcon(icon_ad3ca256ca414a23b8496193bd1434b2);
+        
+    
+        var popup_fac0ac17806641b99f66da35cd109235 = L.popup({"maxHeight": "500", "maxWidth": "500"});
+
+        
+            var html_31d8b38570644e52baf415f3d94cebb5 = $(`<div id="html_31d8b38570644e52baf415f3d94cebb5" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-bordered table-hover table-condensed">   <tbody>     <tr>       <th>NOMBRE</th>       <td>CC</td>     </tr>     <tr>       <th>PROMEDIO</th>       <td>18.0 $\mu g/m^3$</td>     </tr>     <tr>       <th>ALTURANI_1</th>       <td>4 m</td>     </tr>     <tr>       <th>ALTURANIVE</th>       <td>1581 msnm</td>     </tr>     <tr>       <th>CODIGOSERI</th>       <td>230</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_fac0ac17806641b99f66da35cd109235.setContent(html_31d8b38570644e52baf415f3d94cebb5);
+        
+
+        marker_3e49306b93bc4a2eb0558e7c5113e513.bindPopup(popup_fac0ac17806641b99f66da35cd109235)
+        ;
+
+        
+    
+    
+            marker_3e49306b93bc4a2eb0558e7c5113e513.bindTooltip(
+                `<div>
+                     Nube 230
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fcb284d137964da3b474ab975c0c9493 = L.marker(
+                [6.17077, -75.6396],
+                {}
+            ).addTo(feature_group_3a30bdd0c4c94eab97f8aab97fd6d69e);
+        
+    
+            var icon_5c5405a7e13942958fa4a5f691e53ab6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_fcb284d137964da3b474ab975c0c9493.setIcon(icon_5c5405a7e13942958fa4a5f691e53ab6);
+        
+    
+        var popup_5df54a9d93a1408f8705c93fef2b547b = L.popup({"maxHeight": "500", "maxWidth": "500"});
+
+        
+            var html_08edf11501c14bcf9f49498c9652d25d = $(`<div id="html_08edf11501c14bcf9f49498c9652d25d" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-bordered table-hover table-condensed">   <tbody>     <tr>       <th>NOMBRE</th>       <td>CC</td>     </tr>     <tr>       <th>PROMEDIO</th>       <td>23.4 $\mu g/m^3$</td>     </tr>     <tr>       <th>ALTURANI_1</th>       <td>2 m</td>     </tr>     <tr>       <th>ALTURANIVE</th>       <td>1715 msnm</td>     </tr>     <tr>       <th>CODIGOSERI</th>       <td>46</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_5df54a9d93a1408f8705c93fef2b547b.setContent(html_08edf11501c14bcf9f49498c9652d25d);
+        
+
+        marker_fcb284d137964da3b474ab975c0c9493.bindPopup(popup_5df54a9d93a1408f8705c93fef2b547b)
+        ;
+
+        
+    
+    
+            marker_fcb284d137964da3b474ab975c0c9493.bindTooltip(
+                `<div>
+                     Nube 46
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c988dc7faa1542259acb587dd5384f2e = L.marker(
+                [6.179644, -75.608693],
+                {}
+            ).addTo(feature_group_3a30bdd0c4c94eab97f8aab97fd6d69e);
+        
+    
+            var icon_f6d3b815d1104a9591f3cb054559e212 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_c988dc7faa1542259acb587dd5384f2e.setIcon(icon_f6d3b815d1104a9591f3cb054559e212);
+        
+    
+        var popup_5adeeb75aad048c4bc9268d9a04644c6 = L.popup({"maxHeight": "500", "maxWidth": "500"});
+
+        
+            var html_15d5e96fe38d414f8049a221dae23646 = $(`<div id="html_15d5e96fe38d414f8049a221dae23646" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-bordered table-hover table-condensed">   <tbody>     <tr>       <th>NOMBRE</th>       <td>CC</td>     </tr>     <tr>       <th>PROMEDIO</th>       <td>21.3 $\mu g/m^3$</td>     </tr>     <tr>       <th>ALTURANI_1</th>       <td>4 m</td>     </tr>     <tr>       <th>ALTURANIVE</th>       <td>1622 msnm</td>     </tr>     <tr>       <th>CODIGOSERI</th>       <td>216</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_5adeeb75aad048c4bc9268d9a04644c6.setContent(html_15d5e96fe38d414f8049a221dae23646);
+        
+
+        marker_c988dc7faa1542259acb587dd5384f2e.bindPopup(popup_5adeeb75aad048c4bc9268d9a04644c6)
+        ;
+
+        
+    
+    
+            marker_c988dc7faa1542259acb587dd5384f2e.bindTooltip(
+                `<div>
+                     Nube 216
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_82545401cfae43898f8f10a3f40dae58 = L.marker(
+                [6.15624, -75.62788],
+                {}
+            ).addTo(feature_group_3a30bdd0c4c94eab97f8aab97fd6d69e);
+        
+    
+            var icon_480aaa2ae83a4cd899c68543cb2a4d63 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_82545401cfae43898f8f10a3f40dae58.setIcon(icon_480aaa2ae83a4cd899c68543cb2a4d63);
+        
+    
+        var popup_987ffffe26634342ab070275838ac3a5 = L.popup({"maxHeight": "500", "maxWidth": "500"});
+
+        
+            var html_5a297a4c8bd546f5b6489844e89651e2 = $(`<div id="html_5a297a4c8bd546f5b6489844e89651e2" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-bordered table-hover table-condensed">   <tbody>     <tr>       <th>NOMBRE</th>       <td>CC</td>     </tr>     <tr>       <th>PROMEDIO</th>       <td>26.2 $\mu g/m^3$</td>     </tr>     <tr>       <th>ALTURANI_1</th>       <td>22 m</td>     </tr>     <tr>       <th>ALTURANIVE</th>       <td>1722 msnm</td>     </tr>     <tr>       <th>CODIGOSERI</th>       <td>197</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_987ffffe26634342ab070275838ac3a5.setContent(html_5a297a4c8bd546f5b6489844e89651e2);
+        
+
+        marker_82545401cfae43898f8f10a3f40dae58.bindPopup(popup_987ffffe26634342ab070275838ac3a5)
+        ;
+
+        
+    
+    
+            marker_82545401cfae43898f8f10a3f40dae58.bindTooltip(
+                `<div>
+                     Nube 197
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_59458f4c917147e9a04daffe217a4903 = L.marker(
+                [6.187302076306954, -75.59473983943462],
+                {}
+            ).addTo(feature_group_3a30bdd0c4c94eab97f8aab97fd6d69e);
+        
+    
+            var icon_2dca19159f954bc88e435bfe6b8807e5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_59458f4c917147e9a04daffe217a4903.setIcon(icon_2dca19159f954bc88e435bfe6b8807e5);
+        
+    
+        var popup_8f717bd2fae24767892ca7836dcabab9 = L.popup({"maxHeight": "500", "maxWidth": "500"});
+
+        
+            var html_698a25b8a478441da3977f9cd2267f94 = $(`<div id="html_698a25b8a478441da3977f9cd2267f94" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-bordered table-hover table-condensed">   <tbody>     <tr>       <th>NOMBRE</th>       <td>CC</td>     </tr>     <tr>       <th>PROMEDIO</th>       <td>21.1 $\mu g/m^3$</td>     </tr>     <tr>       <th>ALTURANI_1</th>       <td>8 m</td>     </tr>     <tr>       <th>ALTURANIVE</th>       <td>1598 msnm</td>     </tr>     <tr>       <th>CODIGOSERI</th>       <td>215</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_8f717bd2fae24767892ca7836dcabab9.setContent(html_698a25b8a478441da3977f9cd2267f94);
+        
+
+        marker_59458f4c917147e9a04daffe217a4903.bindPopup(popup_8f717bd2fae24767892ca7836dcabab9)
+        ;
+
+        
+    
+    
+            marker_59458f4c917147e9a04daffe217a4903.bindTooltip(
+                `<div>
+                     Nube 215
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ea6e55c0c97041bfb63d2ebe6dda281c = L.marker(
+                [6.176918293105644, -75.60633167624472],
+                {}
+            ).addTo(feature_group_3a30bdd0c4c94eab97f8aab97fd6d69e);
+        
+    
+            var icon_7759fb1b1d1f460195c40ba9197895ca = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "lightgray", "prefix": "fa"}
+            );
+            marker_ea6e55c0c97041bfb63d2ebe6dda281c.setIcon(icon_7759fb1b1d1f460195c40ba9197895ca);
+        
+    
+        var popup_ccb0219ecf634048bbab4c4aa69d77a4 = L.popup({"maxHeight": "500", "maxWidth": "500"});
+
+        
+            var html_42aeab074e444ddba74872ca8cc9b7c4 = $(`<div id="html_42aeab074e444ddba74872ca8cc9b7c4" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-bordered table-hover table-condensed">   <tbody>     <tr>       <th>NOMBRE</th>       <td>CC</td>     </tr>     <tr>       <th>PROMEDIO</th>       <td>nan $\mu g/m^3$</td>     </tr>     <tr>       <th>ALTURANI_1</th>       <td>4 m</td>     </tr>     <tr>       <th>ALTURANIVE</th>       <td>1462 msnm</td>     </tr>     <tr>       <th>CODIGOSERI</th>       <td>175</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_ccb0219ecf634048bbab4c4aa69d77a4.setContent(html_42aeab074e444ddba74872ca8cc9b7c4);
+        
+
+        marker_ea6e55c0c97041bfb63d2ebe6dda281c.bindPopup(popup_ccb0219ecf634048bbab4c4aa69d77a4)
+        ;
+
+        
+    
+    
+            marker_ea6e55c0c97041bfb63d2ebe6dda281c.bindTooltip(
+                `<div>
+                     Nube 175
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_58cbb17673e841fdbefcc3295b0e5c36 = L.marker(
+                [6.174909462972628, -75.63239265880837],
+                {}
+            ).addTo(feature_group_3a30bdd0c4c94eab97f8aab97fd6d69e);
+        
+    
+            var icon_e81f4e2af65d4dbea2f5cc056964ef7d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_58cbb17673e841fdbefcc3295b0e5c36.setIcon(icon_e81f4e2af65d4dbea2f5cc056964ef7d);
+        
+    
+        var popup_3e53cc03dea04d0ab2e2955c9990939d = L.popup({"maxHeight": "500", "maxWidth": "500"});
+
+        
+            var html_cf843ccd1aa2464c8da320f409817449 = $(`<div id="html_cf843ccd1aa2464c8da320f409817449" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-bordered table-hover table-condensed">   <tbody>     <tr>       <th>NOMBRE</th>       <td>CC</td>     </tr>     <tr>       <th>PROMEDIO</th>       <td>14.5 $\mu g/m^3$</td>     </tr>     <tr>       <th>ALTURANI_1</th>       <td>4 m</td>     </tr>     <tr>       <th>ALTURANIVE</th>       <td>1600 msnm</td>     </tr>     <tr>       <th>CODIGOSERI</th>       <td>177</td>     </tr>   </tbody> </table></div>`)[0];
+            popup_3e53cc03dea04d0ab2e2955c9990939d.setContent(html_cf843ccd1aa2464c8da320f409817449);
+        
+
+        marker_58cbb17673e841fdbefcc3295b0e5c36.bindPopup(popup_3e53cc03dea04d0ab2e2955c9990939d)
+        ;
+
+        
+    
+    
+            marker_58cbb17673e841fdbefcc3295b0e5c36.bindTooltip(
+                `<div>
+                     Nube 177
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+        function geo_json_48934e9f405b492598723b5e56798100_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_99f912b68a704f0e8bdeca413c65c5c0.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_48934e9f405b492598723b5e56798100 = L.geoJson(null, {
+                onEachFeature: geo_json_48934e9f405b492598723b5e56798100_onEachFeature,
+            
+        }).addTo(map_99f912b68a704f0e8bdeca413c65c5c0);
+
+        function geo_json_48934e9f405b492598723b5e56798100_add (data) {
+            geo_json_48934e9f405b492598723b5e56798100.addData(data);
+        }
+            geo_json_48934e9f405b492598723b5e56798100_add({"bbox": [-75.647475, 6.154096, -75.585412, 6.201011], "features": [{"bbox": [-75.647475, 6.154096, -75.585412, 6.201011], "geometry": {"coordinates": [[[-75.585412, 6.186565], [-75.585515, 6.186512], [-75.585624, 6.186471], [-75.585718, 6.186442], [-75.585836, 6.186385], [-75.585944, 6.186338], [-75.586047, 6.186286], [-75.58615, 6.186222], [-75.586253, 6.186165], [-75.586355, 6.186095], [-75.58647, 6.18602], [-75.586561, 6.18595], [-75.586663, 6.18587], [-75.586755, 6.185806], [-75.586835, 6.185731], [-75.58692, 6.185656], [-75.587011, 6.18557], [-75.587096, 6.18549], [-75.587182, 6.185409], [-75.587273, 6.185328], [-75.587353, 6.185247], [-75.587438, 6.185172], [-75.587518, 6.185092], [-75.587598, 6.185017], [-75.587677, 6.184937], [-75.587757, 6.184862], [-75.587831, 6.184782], [-75.587916, 6.184683], [-75.588007, 6.184608], [-75.588087, 6.184528], [-75.588167, 6.184453], [-75.588247, 6.184372], [-75.588332, 6.184298], [-75.588435, 6.184205], [-75.588514, 6.184119], [-75.5886, 6.184032], [-75.588679, 6.183952], [-75.588764, 6.183866], [-75.58885, 6.183773], [-75.588929, 6.183693], [-75.589009, 6.183612], [-75.589094, 6.183526], [-75.589174, 6.183451], [-75.589248, 6.183371], [-75.589334, 6.183296], [-75.589407, 6.183209], [-75.589482, 6.183128], [-75.58955, 6.183037], [-75.589618, 6.182945], [-75.589674, 6.182842], [-75.589748, 6.182743], [-75.58981, 6.182629], [-75.589867, 6.182532], [-75.589918, 6.182433], [-75.589968, 6.182336], [-75.590036, 6.182233], [-75.590087, 6.18213], [-75.590149, 6.182038], [-75.590206, 6.18194], [-75.590263, 6.181837], [-75.590325, 6.181745], [-75.590381, 6.181648], [-75.590444, 6.181555], [-75.590506, 6.181463], [-75.590585, 6.181355], [-75.590665, 6.18125], [-75.590733, 6.181164], [-75.590801, 6.181067], [-75.590869, 6.180975], [-75.590932, 6.180883], [-75.590993, 6.180779], [-75.59105, 6.180682], [-75.591101, 6.180585], [-75.591152, 6.180482], [-75.591214, 6.180378], [-75.59127, 6.180275], [-75.591321, 6.180172], [-75.591378, 6.180069], [-75.591429, 6.17997], [-75.59148, 6.179873], [-75.591542, 6.179764], [-75.591598, 6.179661], [-75.591661, 6.179557], [-75.591722, 6.179454], [-75.591779, 6.179357], [-75.591842, 6.179241], [-75.591904, 6.179144], [-75.591966, 6.179041], [-75.592022, 6.178944], [-75.592074, 6.178845], [-75.592124, 6.178748], [-75.592169, 6.178639], [-75.592237, 6.178529], [-75.592294, 6.178426], [-75.592373, 6.178329], [-75.592441, 6.178237], [-75.592515, 6.178151], [-75.5926, 6.17807], [-75.592686, 6.177989], [-75.592765, 6.177909], [-75.592845, 6.177828], [-75.592936, 6.177737], [-75.593028, 6.177649], [-75.593113, 6.177563], [-75.593192, 6.177483], [-75.593278, 6.177402], [-75.593363, 6.177322], [-75.593454, 6.177241], [-75.59354, 6.177165], [-75.593631, 6.17709], [-75.593722, 6.177021], [-75.593866, 6.176992], [-75.594015, 6.176985], [-75.594124, 6.176973], [-75.594227, 6.176926], [-75.594318, 6.176851], [-75.594397, 6.176771], [-75.594483, 6.17669], [-75.594557, 6.176604], [-75.594637, 6.176518], [-75.594716, 6.17642], [-75.594807, 6.176333], [-75.59491, 6.176253], [-75.594995, 6.176178], [-75.595092, 6.176091], [-75.595178, 6.176005], [-75.595274, 6.175919], [-75.59536, 6.175844], [-75.595451, 6.175775], [-75.595536, 6.175705], [-75.595634, 6.175636], [-75.595725, 6.175573], [-75.595828, 6.175491], [-75.595919, 6.175416], [-75.596021, 6.175324], [-75.596124, 6.175238], [-75.596215, 6.175163], [-75.596295, 6.175087], [-75.59638, 6.175018], [-75.596471, 6.174943], [-75.596574, 6.174863], [-75.596682, 6.174777], [-75.596785, 6.174713], [-75.596888, 6.174633], [-75.596985, 6.174562], [-75.597076, 6.174499], [-75.597179, 6.174424], [-75.597264, 6.174355], [-75.597361, 6.174291], [-75.597447, 6.174222], [-75.597533, 6.174153], [-75.597629, 6.174061], [-75.597726, 6.173986], [-75.597818, 6.173917], [-75.597909, 6.173835], [-75.598, 6.173761], [-75.598097, 6.17368], [-75.598188, 6.173617], [-75.598285, 6.173547], [-75.598399, 6.173455], [-75.598507, 6.173368], [-75.598604, 6.173293], [-75.598696, 6.173218], [-75.598792, 6.173149], [-75.598884, 6.17308], [-75.598986, 6.173005], [-75.599095, 6.172924], [-75.599181, 6.172854], [-75.599294, 6.172785], [-75.599414, 6.172716], [-75.599512, 6.172658], [-75.599638, 6.172589], [-75.599763, 6.172525], [-75.599866, 6.172473], [-75.599963, 6.172409], [-75.600066, 6.172346], [-75.600169, 6.172276], [-75.600265, 6.172207], [-75.600374, 6.172137], [-75.600477, 6.172068], [-75.600574, 6.171993], [-75.60067, 6.171918], [-75.60075, 6.171837], [-75.600836, 6.171763], [-75.600921, 6.171676], [-75.60099, 6.171589], [-75.601069, 6.171503], [-75.601143, 6.171411], [-75.601211, 6.171325], [-75.601273, 6.171228], [-75.601341, 6.171135], [-75.601404, 6.171038], [-75.601466, 6.170946], [-75.601534, 6.170849], [-75.601591, 6.17075], [-75.601653, 6.170653], [-75.601715, 6.17055], [-75.601772, 6.170453], [-75.60184, 6.170361], [-75.601908, 6.170262], [-75.601976, 6.170171], [-75.60205, 6.170085], [-75.602118, 6.169999], [-75.602192, 6.169906], [-75.602265, 6.169808], [-75.602333, 6.169711], [-75.602396, 6.169608], [-75.602446, 6.169509], [-75.602497, 6.169401], [-75.602537, 6.169287], [-75.602576, 6.169171], [-75.602603, 6.169051], [-75.602631, 6.168943], [-75.602653, 6.168817], [-75.602692, 6.168691], [-75.60272, 6.168565], [-75.602747, 6.16845], [-75.602764, 6.168336], [-75.60278, 6.168216], [-75.602801, 6.168107], [-75.602818, 6.167998], [-75.602828, 6.167889], [-75.60285, 6.167781], [-75.602878, 6.167666], [-75.602911, 6.167545], [-75.602944, 6.167414], [-75.602978, 6.1673], [-75.603006, 6.16719], [-75.603045, 6.167082], [-75.603084, 6.166979], [-75.603129, 6.166865], [-75.603163, 6.166749], [-75.603196, 6.166635], [-75.603235, 6.166526], [-75.603263, 6.166411], [-75.603302, 6.166291], [-75.603324, 6.166177], [-75.603352, 6.166063], [-75.603368, 6.165953], [-75.603401, 6.165822], [-75.603418, 6.165708], [-75.603451, 6.165598], [-75.603473, 6.165478], [-75.603501, 6.165364], [-75.603522, 6.165244], [-75.603556, 6.165129], [-75.603601, 6.165009], [-75.603646, 6.164894], [-75.603696, 6.164785], [-75.603753, 6.164688], [-75.603821, 6.164585], [-75.603883, 6.164486], [-75.603957, 6.164383], [-75.604025, 6.164286], [-75.604087, 6.164194], [-75.604161, 6.164084], [-75.604229, 6.163998], [-75.604303, 6.163912], [-75.604377, 6.163832], [-75.604463, 6.163751], [-75.604548, 6.163675], [-75.604628, 6.1636], [-75.604724, 6.163531], [-75.604816, 6.163468], [-75.604907, 6.163404], [-75.604993, 6.163335], [-75.605078, 6.16326], [-75.605134, 6.163163], [-75.605156, 6.163138], [-75.605209, 6.163077], [-75.605288, 6.162984], [-75.605356, 6.162898], [-75.605436, 6.162817], [-75.605533, 6.162754], [-75.605636, 6.162713], [-75.605745, 6.162684], [-75.605859, 6.162653], [-75.605963, 6.162614], [-75.606071, 6.162584], [-75.60618, 6.162561], [-75.6063, 6.162526], [-75.606409, 6.162496], [-75.606524, 6.162466], [-75.606638, 6.162443], [-75.606747, 6.162414], [-75.606862, 6.16239], [-75.606922, 6.16238], [-75.606976, 6.162372], [-75.607085, 6.162348], [-75.607195, 6.162341], [-75.607309, 6.162313], [-75.607424, 6.162305], [-75.607556, 6.16227], [-75.607665, 6.162253], [-75.607796, 6.162223], [-75.607911, 6.16221], [-75.608043, 6.162187], [-75.608152, 6.162186], [-75.608261, 6.16218], [-75.608376, 6.162184], [-75.608429, 6.162192], [-75.608429, 6.162113], [-75.6086, 6.16205], [-75.609104, 6.161884], [-75.609532, 6.161539], [-75.610026, 6.161241], [-75.610481, 6.160966], [-75.61125, 6.160501], [-75.611837, 6.160147], [-75.612298, 6.159908], [-75.612852, 6.159621], [-75.613287, 6.159396], [-75.613649, 6.159196], [-75.614093, 6.158942], [-75.61471, 6.15859], [-75.615279, 6.158268], [-75.615856, 6.15795], [-75.616533, 6.157578], [-75.616907, 6.157373], [-75.617309, 6.15717], [-75.617553, 6.157062], [-75.617781, 6.156962], [-75.618066, 6.156833], [-75.618418, 6.156746], [-75.61885, 6.156607], [-75.619286, 6.156494], [-75.619813, 6.156382], [-75.620338, 6.156305], [-75.62034, 6.156304], [-75.620343, 6.156305], [-75.620423, 6.156293], [-75.620541, 6.156276], [-75.620633, 6.156271], [-75.62076, 6.156272], [-75.620863, 6.156273], [-75.621025, 6.156275], [-75.621164, 6.156276], [-75.621245, 6.156277], [-75.621277, 6.156242], [-75.621392, 6.156115], [-75.621588, 6.1559], [-75.621886, 6.155656], [-75.622238, 6.155459], [-75.622655, 6.155266], [-75.622905, 6.15501], [-75.623145, 6.154793], [-75.623458, 6.154635], [-75.623815, 6.154441], [-75.62399, 6.154265], [-75.624157, 6.154099], [-75.62416, 6.154096], [-75.624194, 6.154145], [-75.62426, 6.15424], [-75.624273, 6.154231], [-75.62437, 6.154167], [-75.624427, 6.154283], [-75.624487, 6.15439], [-75.62454, 6.154504], [-75.624592, 6.1546], [-75.624656, 6.154697], [-75.624732, 6.154794], [-75.624796, 6.154884], [-75.624871, 6.154986], [-75.624947, 6.155072], [-75.625034, 6.155162], [-75.62512, 6.155231], [-75.625219, 6.155304], [-75.625328, 6.155292], [-75.625431, 6.155251], [-75.62554, 6.155216], [-75.625649, 6.155175], [-75.625762, 6.155123], [-75.625866, 6.155087], [-75.62598, 6.155048], [-75.626014, 6.155037], [-75.626095, 6.155012], [-75.626198, 6.154977], [-75.626307, 6.15493], [-75.626415, 6.154895], [-75.626524, 6.154861], [-75.626633, 6.154831], [-75.626741, 6.154801], [-75.626862, 6.154766], [-75.626982, 6.154731], [-75.627114, 6.154684], [-75.627229, 6.154661], [-75.627343, 6.154631], [-75.627452, 6.154618], [-75.627584, 6.15459], [-75.627704, 6.15456], [-75.627819, 6.15453], [-75.627928, 6.154484], [-75.628048, 6.154437], [-75.628162, 6.154385], [-75.62827, 6.154338], [-75.628397, 6.154291], [-75.628511, 6.154239], [-75.628631, 6.154199], [-75.628718, 6.154267], [-75.628731, 6.154381], [-75.62876, 6.154489], [-75.628772, 6.154603], [-75.628808, 6.154712], [-75.628837, 6.15482], [-75.628879, 6.154934], [-75.62892, 6.155042], [-75.628973, 6.155145], [-75.629025, 6.155248], [-75.629089, 6.155345], [-75.629153, 6.155435], [-75.629223, 6.155521], [-75.629299, 6.155611], [-75.62938, 6.155691], [-75.629466, 6.15577], [-75.629565, 6.155838], [-75.629669, 6.1559], [-75.629766, 6.155956], [-75.629865, 6.156024], [-75.629975, 6.156092], [-75.630079, 6.156149], [-75.630176, 6.156199], [-75.630275, 6.15625], [-75.63039, 6.1563], [-75.630488, 6.156351], [-75.630586, 6.156403], [-75.630701, 6.156453], [-75.630805, 6.156498], [-75.630926, 6.156548], [-75.63103, 6.156599], [-75.631133, 6.156638], [-75.631237, 6.156689], [-75.631358, 6.156739], [-75.631468, 6.156784], [-75.631571, 6.156818], [-75.631681, 6.156851], [-75.63179, 6.156885], [-75.6319, 6.156924], [-75.632009, 6.156952], [-75.632119, 6.15698], [-75.632228, 6.157007], [-75.632337, 6.157023], [-75.632446, 6.157046], [-75.632561, 6.157044], [-75.632676, 6.157055], [-75.632785, 6.157061], [-75.6329, 6.157059], [-75.633027, 6.157064], [-75.633136, 6.157069], [-75.633245, 6.157074], [-75.633354, 6.157085], [-75.633463, 6.157089], [-75.633578, 6.157106], [-75.633699, 6.157111], [-75.633814, 6.157126], [-75.633929, 6.157137], [-75.634044, 6.157148], [-75.634152, 6.157158], [-75.634268, 6.157175], [-75.634389, 6.157186], [-75.634497, 6.157184], [-75.634613, 6.157184], [-75.634727, 6.157189], [-75.634854, 6.157193], [-75.634968, 6.157204], [-75.635084, 6.157249], [-75.635182, 6.1573], [-75.635252, 6.157386], [-75.63531, 6.157487], [-75.635351, 6.157595], [-75.635386, 6.157709], [-75.63541, 6.157818], [-75.63544, 6.157926], [-75.635475, 6.158029], [-75.635494, 6.158137], [-75.635512, 6.158246], [-75.635536, 6.15836], [-75.635566, 6.158468], [-75.635595, 6.158577], [-75.635636, 6.158703], [-75.635672, 6.158811], [-75.635713, 6.158919], [-75.635772, 6.159027], [-75.635835, 6.159118], [-75.635905, 6.159204], [-75.635975, 6.159294], [-75.636056, 6.15938], [-75.636126, 6.159477], [-75.636196, 6.159561], [-75.636248, 6.159658], [-75.636284, 6.159767], [-75.636325, 6.159881], [-75.636343, 6.159989], [-75.636367, 6.160103], [-75.636368, 6.160212], [-75.636369, 6.16032], [-75.636364, 6.160429], [-75.636354, 6.160544], [-75.636349, 6.160658], [-75.636339, 6.160772], [-75.636328, 6.160886], [-75.636306, 6.161019], [-75.636279, 6.161127], [-75.636251, 6.161236], [-75.636229, 6.161344], [-75.63619, 6.161465], [-75.636156, 6.161585], [-75.636117, 6.1617], [-75.636089, 6.161809], [-75.636056, 6.161918], [-75.636028, 6.162026], [-75.635989, 6.162135], [-75.63595, 6.16225], [-75.635905, 6.162353], [-75.63586, 6.162467], [-75.635809, 6.162571], [-75.635752, 6.162669], [-75.635691, 6.162789], [-75.63564, 6.162893], [-75.635647, 6.163001], [-75.635745, 6.163069], [-75.635826, 6.163154], [-75.63589, 6.163245], [-75.635942, 6.163342], [-75.635995, 6.163444], [-75.636036, 6.163547], [-75.636089, 6.16365], [-75.636141, 6.163746], [-75.636194, 6.163848], [-75.636258, 6.163951], [-75.636299, 6.164059], [-75.636357, 6.164156], [-75.636444, 6.164241], [-75.636554, 6.16424], [-75.636662, 6.164233], [-75.636771, 6.164233], [-75.636886, 6.164209], [-75.636995, 6.164197], [-75.63711, 6.164162], [-75.637248, 6.164143], [-75.637362, 6.164126], [-75.637477, 6.164108], [-75.637586, 6.164095], [-75.637706, 6.164083], [-75.637844, 6.164065], [-75.637953, 6.164059], [-75.638073, 6.16404], [-75.638217, 6.164039], [-75.638349, 6.164044], [-75.638469, 6.164043], [-75.63859, 6.164042], [-75.638705, 6.164053], [-75.63882, 6.164063], [-75.638923, 6.164102], [-75.639033, 6.16413], [-75.639148, 6.164175], [-75.639263, 6.164203], [-75.639361, 6.164254], [-75.639465, 6.164299], [-75.639569, 6.164349], [-75.639678, 6.1644], [-75.639777, 6.164451], [-75.639875, 6.164507], [-75.639979, 6.164552], [-75.640123, 6.164597], [-75.640237, 6.164625], [-75.640347, 6.164629], [-75.640467, 6.164629], [-75.640588, 6.164616], [-75.640714, 6.164598], [-75.640823, 6.164597], [-75.640938, 6.164597], [-75.641052, 6.164596], [-75.641168, 6.164595], [-75.641276, 6.164594], [-75.641403, 6.164593], [-75.641546, 6.164609], [-75.641656, 6.164614], [-75.64177, 6.164625], [-75.641886, 6.164624], [-75.642012, 6.164635], [-75.642127, 6.164639], [-75.642242, 6.16465], [-75.642356, 6.164655], [-75.642477, 6.164659], [-75.642621, 6.164681], [-75.64273, 6.164698], [-75.642834, 6.164732], [-75.642955, 6.164753], [-75.643059, 6.164798], [-75.643162, 6.164849], [-75.643266, 6.1649], [-75.643364, 6.164956], [-75.643474, 6.165018], [-75.643578, 6.165074], [-75.643687, 6.165125], [-75.6438, 6.165189], [-75.643901, 6.165232], [-75.643993, 6.165294], [-75.644085, 6.165356], [-75.644172, 6.16543], [-75.644271, 6.165504], [-75.644369, 6.165577], [-75.644473, 6.165622], [-75.644582, 6.165644], [-75.644697, 6.165644], [-75.644806, 6.165642], [-75.644915, 6.165647], [-75.645024, 6.165647], [-75.645145, 6.165657], [-75.645186, 6.165777], [-75.645187, 6.165896], [-75.6452, 6.166023], [-75.645224, 6.166137], [-75.645242, 6.166245], [-75.645266, 6.166359], [-75.645278, 6.166468], [-75.645285, 6.166588], [-75.645298, 6.166696], [-75.645316, 6.166816], [-75.645346, 6.166924], [-75.64537, 6.167039], [-75.645382, 6.167159], [-75.645406, 6.167267], [-75.64543, 6.167387], [-75.645472, 6.167518], [-75.645501, 6.167626], [-75.645519, 6.167741], [-75.645543, 6.167855], [-75.645567, 6.167974], [-75.64558, 6.168088], [-75.64561, 6.168209], [-75.645634, 6.168335], [-75.645664, 6.168449], [-75.645693, 6.168563], [-75.645729, 6.168665], [-75.645747, 6.168779], [-75.645771, 6.168893], [-75.645806, 6.169007], [-75.645836, 6.169122], [-75.645854, 6.16923], [-75.645873, 6.169338], [-75.645903, 6.169447], [-75.645938, 6.169561], [-75.646036, 6.169611], [-75.64614, 6.169651], [-75.646249, 6.169673], [-75.646376, 6.169706], [-75.64649, 6.169729], [-75.646589, 6.169785], [-75.646693, 6.169852], [-75.646779, 6.169921], [-75.64686, 6.170005], [-75.646942, 6.170102], [-75.647023, 6.170199], [-75.647087, 6.17029], [-75.64714, 6.170392], [-75.647186, 6.170495], [-75.647228, 6.170603], [-75.647263, 6.170706], [-75.647316, 6.170809], [-75.647363, 6.170917], [-75.647398, 6.171025], [-75.64744, 6.171134], [-75.647475, 6.171236], [-75.647424, 6.171334], [-75.647304, 6.171345], [-75.64716, 6.171353], [-75.647045, 6.171359], [-75.646936, 6.171371], [-75.646815, 6.171372], [-75.646706, 6.171373], [-75.646592, 6.171379], [-75.646483, 6.171409], [-75.646374, 6.171433], [-75.64626, 6.17145], [-75.646116, 6.171469], [-75.64599, 6.171481], [-75.645858, 6.1715], [-75.645731, 6.171506], [-75.645611, 6.171513], [-75.645502, 6.171519], [-75.645393, 6.171532], [-75.645284, 6.171543], [-75.645152, 6.171556], [-75.645037, 6.171568], [-75.644928, 6.171592], [-75.644819, 6.17161], [-75.64471, 6.171616], [-75.64459, 6.171635], [-75.644464, 6.171646], [-75.644354, 6.171653], [-75.64424, 6.171665], [-75.644125, 6.171684], [-75.64401, 6.171685], [-75.643896, 6.171685], [-75.643787, 6.171686], [-75.643762, 6.171682], [-75.643677, 6.17167], [-75.643562, 6.171665], [-75.643447, 6.171661], [-75.643338, 6.171655], [-75.643229, 6.171685], [-75.643115, 6.171725], [-75.643012, 6.17176], [-75.642909, 6.171796], [-75.642795, 6.171848], [-75.642675, 6.171917], [-75.642572, 6.171958], [-75.642463, 6.171999], [-75.64236, 6.17204], [-75.642251, 6.172074], [-75.642148, 6.172121], [-75.642045, 6.172162], [-75.641937, 6.172214], [-75.641828, 6.172267], [-75.641696, 6.172319], [-75.641588, 6.172366], [-75.641468, 6.172407], [-75.641364, 6.172448], [-75.641256, 6.172482], [-75.641124, 6.172517], [-75.641003, 6.172553], [-75.640878, 6.172577], [-75.64074, 6.172612], [-75.640625, 6.172635], [-75.640505, 6.172665], [-75.640396, 6.172683], [-75.640288, 6.172719], [-75.640167, 6.172747], [-75.640052, 6.172777], [-75.639943, 6.172795], [-75.639829, 6.172831], [-75.63972, 6.172854], [-75.639599, 6.172866], [-75.63949, 6.17289], [-75.639376, 6.172913], [-75.639267, 6.172943], [-75.639147, 6.172978], [-75.639021, 6.173019], [-75.6389, 6.173054], [-75.63878, 6.173095], [-75.638671, 6.173136], [-75.638569, 6.173182], [-75.63846, 6.173229], [-75.638351, 6.17327], [-75.638249, 6.173317], [-75.63814, 6.173374], [-75.638031, 6.173427], [-75.637929, 6.173496], [-75.63782, 6.17356], [-75.637717, 6.173623], [-75.637603, 6.173692], [-75.6375, 6.173756], [-75.637403, 6.173814], [-75.6373, 6.173878], [-75.637203, 6.173935], [-75.637118, 6.174005], [-75.637032, 6.174074], [-75.63693, 6.174143], [-75.636826, 6.174212], [-75.63673, 6.17427], [-75.636633, 6.174334], [-75.636524, 6.17441], [-75.636421, 6.174479], [-75.63633, 6.174548], [-75.636239, 6.174612], [-75.636148, 6.174698], [-75.636062, 6.174784], [-75.635971, 6.174859], [-75.635868, 6.17494], [-75.635783, 6.17501], [-75.635697, 6.175079], [-75.635618, 6.175159], [-75.635532, 6.175245], [-75.635435, 6.175303], [-75.635332, 6.17535], [-75.635224, 6.175397], [-75.635133, 6.17546], [-75.63503, 6.175518], [-75.634933, 6.175599], [-75.634847, 6.175673], [-75.634785, 6.175771], [-75.634746, 6.175886], [-75.634751, 6.175913], [-75.63477, 6.175994], [-75.634851, 6.176079], [-75.634926, 6.17617], [-75.635002, 6.176273], [-75.635043, 6.176376], [-75.635101, 6.176477], [-75.635165, 6.176591], [-75.635201, 6.176699], [-75.635237, 6.176813], [-75.635255, 6.176933], [-75.635267, 6.177048], [-75.635268, 6.177162], [-75.63527, 6.177277], [-75.635282, 6.177391], [-75.635357, 6.177471], [-75.635455, 6.177538], [-75.635553, 6.177589], [-75.635657, 6.177645], [-75.635761, 6.177701], [-75.635853, 6.177764], [-75.635952, 6.177826], [-75.636044, 6.177894], [-75.636119, 6.177974], [-75.636201, 6.178064], [-75.636271, 6.178172], [-75.636335, 6.17828], [-75.636388, 6.178389], [-75.636429, 6.178491], [-75.63647, 6.178645], [-75.636489, 6.178766], [-75.636495, 6.17888], [-75.636496, 6.178988], [-75.636491, 6.179102], [-75.636481, 6.179222], [-75.636482, 6.179336], [-75.6365, 6.179451], [-75.636513, 6.17956], [-75.636543, 6.179668], [-75.636595, 6.179777], [-75.636648, 6.179878], [-75.636712, 6.179969], [-75.636793, 6.180055], [-75.636897, 6.180134], [-75.636978, 6.180214], [-75.637054, 6.180298], [-75.637135, 6.180378], [-75.637187, 6.180474], [-75.6372, 6.180583], [-75.637212, 6.180692], [-75.637219, 6.180801], [-75.637237, 6.180915], [-75.637249, 6.181029], [-75.637279, 6.181137], [-75.637314, 6.181246], [-75.637379, 6.181365], [-75.637449, 6.18145], [-75.637535, 6.181541], [-75.637628, 6.181614], [-75.63772, 6.181677], [-75.637825, 6.181756], [-75.637906, 6.181836], [-75.63797, 6.181938], [-75.637988, 6.182046], [-75.638012, 6.182155], [-75.638042, 6.18227], [-75.638043, 6.182378], [-75.63805, 6.182486], [-75.638062, 6.182595], [-75.638115, 6.182698], [-75.638179, 6.182793], [-75.638271, 6.182862], [-75.638369, 6.18293], [-75.638473, 6.182969], [-75.638577, 6.183008], [-75.638675, 6.18307], [-75.638767, 6.183133], [-75.63886, 6.183223], [-75.638947, 6.183292], [-75.639022, 6.183371], [-75.639052, 6.183479], [-75.639053, 6.183587], [-75.639059, 6.183696], [-75.639037, 6.183806], [-75.638981, 6.183909], [-75.638913, 6.184], [-75.638931, 6.184114], [-75.638966, 6.184228], [-75.638996, 6.184342], [-75.639038, 6.184456], [-75.639073, 6.184559], [-75.639108, 6.184662], [-75.639149, 6.18477], [-75.639179, 6.18489], [-75.639209, 6.18501], [-75.639233, 6.185124], [-75.639257, 6.185232], [-75.639252, 6.18534], [-75.639225, 6.18545], [-75.639214, 6.185559], [-75.639215, 6.185678], [-75.639245, 6.185792], [-75.639298, 6.185906], [-75.63935, 6.186003], [-75.639431, 6.186095], [-75.639501, 6.186185], [-75.639548, 6.186288], [-75.639555, 6.186396], [-75.639567, 6.186516], [-75.639568, 6.186637], [-75.639569, 6.186751], [-75.639576, 6.186859], [-75.639577, 6.186973], [-75.639584, 6.187082], [-75.639585, 6.18719], [-75.639591, 6.187299], [-75.639604, 6.187413], [-75.639634, 6.187528], [-75.639663, 6.187642], [-75.639699, 6.187744], [-75.639751, 6.187841], [-75.639804, 6.187938], [-75.639873, 6.188029], [-75.639966, 6.188096], [-75.640053, 6.188176], [-75.640134, 6.188255], [-75.64021, 6.188347], [-75.640279, 6.188437], [-75.640349, 6.188528], [-75.640424, 6.188619], [-75.640489, 6.188715], [-75.640535, 6.188818], [-75.640594, 6.188915], [-75.640652, 6.189018], [-75.64071, 6.18912], [-75.640757, 6.189223], [-75.640758, 6.189337], [-75.640759, 6.189451], [-75.640772, 6.18956], [-75.64075, 6.189674], [-75.640739, 6.189782], [-75.640723, 6.18992], [-75.640696, 6.190029], [-75.640662, 6.190149], [-75.640617, 6.190253], [-75.640572, 6.190395], [-75.640539, 6.190528], [-75.640477, 6.190619], [-75.640461, 6.190728], [-75.640433, 6.190843], [-75.6404, 6.190963], [-75.640331, 6.191049], [-75.640252, 6.191141], [-75.640195, 6.191245], [-75.640139, 6.191342], [-75.640093, 6.191445], [-75.640043, 6.191554], [-75.639987, 6.191669], [-75.639948, 6.191783], [-75.63992, 6.191898], [-75.639898, 6.192013], [-75.639858, 6.192116], [-75.639802, 6.192219], [-75.639757, 6.192322], [-75.639706, 6.19242], [-75.639655, 6.192523], [-75.639593, 6.192621], [-75.639531, 6.192718], [-75.639457, 6.192804], [-75.63936, 6.192862], [-75.639251, 6.192914], [-75.63912, 6.192955], [-75.639011, 6.192979], [-75.638896, 6.192998], [-75.638787, 6.193009], [-75.638678, 6.192998], [-75.638546, 6.192977], [-75.63843, 6.192961], [-75.638309, 6.192939], [-75.638201, 6.192934], [-75.63808, 6.192935], [-75.637971, 6.192942], [-75.637839, 6.192953], [-75.637724, 6.192983], [-75.637615, 6.193024], [-75.637513, 6.193065], [-75.637415, 6.193117], [-75.637318, 6.193169], [-75.637221, 6.193226], [-75.637118, 6.193284], [-75.637016, 6.193331], [-75.636901, 6.193389], [-75.636792, 6.193424], [-75.636683, 6.19346], [-75.636569, 6.193501], [-75.63646, 6.193536], [-75.636363, 6.1936], [-75.636278, 6.193669], [-75.636192, 6.193744], [-75.636124, 6.193852], [-75.636074, 6.193955], [-75.636011, 6.194054], [-75.635972, 6.194168], [-75.635915, 6.194271], [-75.635842, 6.194357], [-75.635779, 6.194461], [-75.635723, 6.194564], [-75.635672, 6.194667], [-75.635622, 6.194783], [-75.635582, 6.194891], [-75.635532, 6.194994], [-75.635492, 6.195097], [-75.635447, 6.195201], [-75.635402, 6.19531], [-75.635358, 6.195413], [-75.635312, 6.195516], [-75.635267, 6.19562], [-75.635194, 6.195723], [-75.635137, 6.19582], [-75.635086, 6.195929], [-75.635024, 6.196027], [-75.634974, 6.196141], [-75.634917, 6.196256], [-75.634866, 6.196354], [-75.634821, 6.196457], [-75.634782, 6.196566], [-75.634731, 6.196674], [-75.634692, 6.196784], [-75.634642, 6.196898], [-75.634608, 6.197013], [-75.634569, 6.197122], [-75.634541, 6.197237], [-75.634513, 6.197345], [-75.634486, 6.197477], [-75.634447, 6.197586], [-75.634419, 6.1977], [-75.634391, 6.197809], [-75.634363, 6.197918], [-75.634341, 6.198033], [-75.634319, 6.198141], [-75.634298, 6.198273], [-75.634287, 6.198382], [-75.634271, 6.198496], [-75.634238, 6.19864], [-75.634221, 6.198748], [-75.634182, 6.198857], [-75.634149, 6.198977], [-75.634109, 6.199081], [-75.634059, 6.199201], [-75.634003, 6.199298], [-75.633946, 6.199402], [-75.633889, 6.199511], [-75.633844, 6.199614], [-75.633794, 6.199711], [-75.633751, 6.199782], [-75.633732, 6.199815], [-75.633658, 6.199929], [-75.633601, 6.200027], [-75.633551, 6.200125], [-75.6335, 6.200228], [-75.633449, 6.200326], [-75.633404, 6.200451], [-75.633359, 6.200561], [-75.63332, 6.200664], [-75.633281, 6.200767], [-75.633236, 6.20087], [-75.633127, 6.200877], [-75.633012, 6.200923], [-75.632915, 6.200981], [-75.632822, 6.201004], [-75.632795, 6.201011], [-75.632686, 6.201006], [-75.632576, 6.200989], [-75.632461, 6.200956], [-75.632352, 6.200905], [-75.632242, 6.200854], [-75.632132, 6.20081], [-75.632103, 6.200799], [-75.631778, 6.200544], [-75.63104, 6.199599], [-75.630512, 6.199022], [-75.630195, 6.198234], [-75.629929, 6.197235], [-75.629558, 6.196394], [-75.629295, 6.19608], [-75.628296, 6.196082], [-75.627561, 6.196558], [-75.627037, 6.196928], [-75.626353, 6.196877], [-75.625564, 6.196617], [-75.624775, 6.196514], [-75.623934, 6.196358], [-75.622829, 6.196256], [-75.621726, 6.196259], [-75.620832, 6.19642], [-75.619729, 6.196581], [-75.618311, 6.196901], [-75.61705, 6.197378], [-75.616157, 6.197486], [-75.614897, 6.19791], [-75.614162, 6.198386], [-75.612954, 6.198757], [-75.612008, 6.198918], [-75.611317, 6.199038], [-75.611243, 6.199031], [-75.611128, 6.199027], [-75.610933, 6.199016], [-75.610824, 6.199017], [-75.610708, 6.199006], [-75.610571, 6.198979], [-75.61045, 6.198957], [-75.610311, 6.198935], [-75.610174, 6.198913], [-75.610047, 6.198898], [-75.609926, 6.198875], [-75.609788, 6.198853], [-75.609679, 6.198842], [-75.609541, 6.198827], [-75.609432, 6.198827], [-75.609317, 6.19881], [-75.609208, 6.198801], [-75.609047, 6.198784], [-75.608938, 6.19878], [-75.608817, 6.198769], [-75.608708, 6.198764], [-75.608564, 6.198754], [-75.60845, 6.198737], [-75.60834, 6.198726], [-75.608202, 6.198716], [-75.608081, 6.198705], [-75.607967, 6.198695], [-75.607857, 6.198679], [-75.607748, 6.198668], [-75.607633, 6.198651], [-75.607605, 6.198648], [-75.607434, 6.198563], [-75.606592, 6.19825], [-75.605962, 6.198462], [-75.60585, 6.198469], [-75.605794, 6.198459], [-75.605662, 6.198438], [-75.605553, 6.198427], [-75.60542, 6.198399], [-75.6053, 6.198377], [-75.605179, 6.198361], [-75.605064, 6.198345], [-75.604937, 6.198322], [-75.604822, 6.198318], [-75.604707, 6.19829], [-75.604592, 6.198279], [-75.604477, 6.198263], [-75.604368, 6.198247], [-75.604259, 6.198236], [-75.604138, 6.198231], [-75.604011, 6.198232], [-75.603879, 6.198233], [-75.603765, 6.198234], [-75.60365, 6.198229], [-75.603541, 6.19823], [-75.603426, 6.198231], [-75.603317, 6.198227], [-75.603202, 6.198216], [-75.603081, 6.198193], [-75.60296, 6.19816], [-75.602845, 6.198109], [-75.602741, 6.198059], [-75.602637, 6.198008], [-75.602528, 6.197952], [-75.602429, 6.197883], [-75.602343, 6.197816], [-75.602239, 6.197748], [-75.602135, 6.197686], [-75.602031, 6.197629], [-75.601927, 6.19755], [-75.601834, 6.197488], [-75.601808, 6.197472], [-75.601731, 6.19742], [-75.601627, 6.197358], [-75.601517, 6.197307], [-75.601402, 6.197251], [-75.601286, 6.197195], [-75.601183, 6.197161], [-75.601079, 6.197128], [-75.600998, 6.197101], [-75.600976, 6.197094], [-75.600866, 6.197066], [-75.600751, 6.197033], [-75.600642, 6.19701], [-75.600532, 6.196978], [-75.600423, 6.196956], [-75.600308, 6.196933], [-75.600187, 6.196894], [-75.600072, 6.196861], [-75.599963, 6.196827], [-75.599835, 6.196788], [-75.599726, 6.196743], [-75.599617, 6.196704], [-75.599507, 6.196653], [-75.599397, 6.196597], [-75.599288, 6.196541], [-75.599172, 6.196485], [-75.599075, 6.196422], [-75.598976, 6.19636], [-75.598878, 6.196298], [-75.598774, 6.196236], [-75.598676, 6.196186], [-75.598566, 6.196128], [-75.598463, 6.196072], [-75.598359, 6.196022], [-75.598255, 6.19596], [-75.598151, 6.195892], [-75.598058, 6.195829], [-75.597961, 6.195767], [-75.597862, 6.195711], [-75.597764, 6.195649], [-75.597666, 6.195592], [-75.597562, 6.195536], [-75.597458, 6.195474], [-75.597342, 6.195401], [-75.597227, 6.195345], [-75.597123, 6.195276], [-75.597025, 6.195225], [-75.59691, 6.195164], [-75.596795, 6.195096], [-75.596702, 6.195027], [-75.59661, 6.19496], [-75.596517, 6.194898], [-75.59643, 6.194824], [-75.596343, 6.194739], [-75.596262, 6.194659], [-75.596187, 6.19458], [-75.5961, 6.194506], [-75.596013, 6.194427], [-75.595915, 6.194358], [-75.595822, 6.194285], [-75.59573, 6.194223], [-75.595632, 6.194162], [-75.59554, 6.194093], [-75.595447, 6.19402], [-75.595366, 6.193945], [-75.595262, 6.193867], [-75.595192, 6.193775], [-75.595111, 6.193691], [-75.594995, 6.193635], [-75.594886, 6.193601], [-75.594777, 6.193567], [-75.594656, 6.193556], [-75.594541, 6.193534], [-75.594431, 6.193501], [-75.594322, 6.193485], [-75.594207, 6.193446], [-75.594092, 6.193412], [-75.593983, 6.193384], [-75.593879, 6.193345], [-75.593776, 6.193312], [-75.593666, 6.193284], [-75.593556, 6.193256], [-75.593442, 6.19324], [-75.593333, 6.193235], [-75.593217, 6.193224], [-75.593102, 6.193214], [-75.592993, 6.193214], [-75.592878, 6.193181], [-75.592757, 6.193153], [-75.592654, 6.193102], [-75.592555, 6.193052], [-75.592446, 6.192996], [-75.592342, 6.192956], [-75.592238, 6.192906], [-75.592135, 6.192866], [-75.592031, 6.192833], [-75.591916, 6.192771], [-75.591909, 6.192663], [-75.591943, 6.19253], [-75.59197, 6.192422], [-75.592027, 6.192301], [-75.592066, 6.192192], [-75.592111, 6.192083], [-75.592161, 6.191986], [-75.592201, 6.191882], [-75.59224, 6.191779], [-75.592314, 6.19167], [-75.592313, 6.191562], [-75.592226, 6.191493], [-75.592139, 6.191409], [-75.592052, 6.19134], [-75.591965, 6.191273], [-75.591856, 6.191205], [-75.591764, 6.191143], [-75.591665, 6.19108], [-75.591561, 6.191024], [-75.591469, 6.190957], [-75.591365, 6.1909], [-75.591267, 6.190843], [-75.591163, 6.190781], [-75.591065, 6.190719], [-75.590961, 6.190663], [-75.590857, 6.190618], [-75.590759, 6.190561], [-75.590661, 6.190499], [-75.590562, 6.190431], [-75.590459, 6.19037], [-75.590355, 6.190307], [-75.590251, 6.190239], [-75.590136, 6.190166], [-75.590037, 6.190104], [-75.589933, 6.190035], [-75.589835, 6.189974], [-75.589742, 6.189912], [-75.589656, 6.189843], [-75.589564, 6.189781], [-75.589465, 6.189714], [-75.589379, 6.189645], [-75.589275, 6.189572], [-75.589171, 6.189504], [-75.589078, 6.189436], [-75.588986, 6.189374], [-75.588882, 6.189301], [-75.588795, 6.189232], [-75.588702, 6.189164], [-75.58861, 6.189102], [-75.588512, 6.189035], [-75.588391, 6.188966], [-75.588293, 6.188905], [-75.588194, 6.188831], [-75.58809, 6.188768], [-75.587986, 6.188684], [-75.587893, 6.188611], [-75.58779, 6.188536], [-75.587697, 6.188469], [-75.58761, 6.188389], [-75.587518, 6.18831], [-75.587442, 6.18823], [-75.587361, 6.188146], [-75.587257, 6.188054], [-75.58717, 6.187976], [-75.587089, 6.187884], [-75.586985, 6.1878], [-75.586898, 6.187731], [-75.586806, 6.187652], [-75.586719, 6.187579], [-75.586626, 6.187493], [-75.586551, 6.187413], [-75.586458, 6.187335], [-75.586371, 6.187256], [-75.586291, 6.187176], [-75.586203, 6.187097], [-75.586117, 6.187028], [-75.586018, 6.186961], [-75.585921, 6.186893], [-75.585822, 6.186836], [-75.585712, 6.186763], [-75.585608, 6.186706], [-75.585516, 6.186639], [-75.585412, 6.186565]]], "type": "Polygon"}, "id": "0", "properties": {"FID": 0}, "type": "Feature"}], "type": "FeatureCollection"});
+        
+    
+            geo_json_48934e9f405b492598723b5e56798100.bindTooltip(
+                `<div>
+                     Itagüí
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+        function geo_json_00fc93ab975943688065eb402b9ee68f_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_99f912b68a704f0e8bdeca413c65c5c0.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_00fc93ab975943688065eb402b9ee68f = L.geoJson(null, {
+                onEachFeature: geo_json_00fc93ab975943688065eb402b9ee68f_onEachFeature,
+            
+        }).addTo(map_99f912b68a704f0e8bdeca413c65c5c0);
+
+        function geo_json_00fc93ab975943688065eb402b9ee68f_add (data) {
+            geo_json_00fc93ab975943688065eb402b9ee68f.addData(data);
+        }
+            geo_json_00fc93ab975943688065eb402b9ee68f_add({"bbox": [-75.68384, 6.082466713909932, -75.30417412519455, 6.455678023498182], "features": [{"bbox": [-75.6199, 6.15315, -75.6199, 6.15315], "geometry": {"coordinates": [-75.6199, 6.15315], "type": "Point"}, "id": "0", "properties": {"NOMBRE": "CC", "Promedio": "21.0 $\\mu g/m^3$", "alturaNi_1": "17 m", "alturaNive": "1622 msnm", "codigoSeri": "212"}, "type": "Feature"}, {"bbox": [-75.58864, 6.259215, -75.58864, 6.259215], "geometry": {"coordinates": [-75.58864, 6.259215], "type": "Point"}, "id": "1", "properties": {"NOMBRE": "CC", "Promedio": "nan $\\mu g/m^3$", "alturaNi_1": "0 m", "alturaNive": "0 msnm", "codigoSeri": "254"}, "type": "Feature"}, {"bbox": [-75.56612, 6.21275, -75.56612, 6.21275], "geometry": {"coordinates": [-75.56612, 6.21275], "type": "Point"}, "id": "2", "properties": {"NOMBRE": "CC", "Promedio": "19.9 $\\mu g/m^3$", "alturaNi_1": "21 m", "alturaNive": "1619 msnm", "codigoSeri": "141"}, "type": "Feature"}, {"bbox": [-75.57848, 6.17856, -75.57848, 6.17856], "geometry": {"coordinates": [-75.57848, 6.17856], "type": "Point"}, "id": "3", "properties": {"NOMBRE": "CC", "Promedio": "21.1 $\\mu g/m^3$", "alturaNi_1": "6 m", "alturaNive": "1591 msnm", "codigoSeri": "239"}, "type": "Feature"}, {"bbox": [-75.61848, 6.16836, -75.61848, 6.16836], "geometry": {"coordinates": [-75.61848, 6.16836], "type": "Point"}, "id": "4", "properties": {"NOMBRE": "CC", "Promedio": "24.6 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1606 msnm", "codigoSeri": "45"}, "type": "Feature"}, {"bbox": [-75.5528222769499, 6.285188624186003, -75.5528222769499, 6.285188624186003], "geometry": {"coordinates": [-75.5528222769499, 6.285188624186003], "type": "Point"}, "id": "5", "properties": {"NOMBRE": "CC", "Promedio": "20.2 $\\mu g/m^3$", "alturaNi_1": "50 m", "alturaNive": "1691 msnm", "codigoSeri": "207"}, "type": "Feature"}, {"bbox": [-75.51442, 6.34426, -75.51442, 6.34426], "geometry": {"coordinates": [-75.51442, 6.34426], "type": "Point"}, "id": "6", "properties": {"NOMBRE": "CC", "Promedio": "19.9 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1431 msnm", "codigoSeri": "249"}, "type": "Feature"}, {"bbox": [-75.65020824175008, 6.172793898407272, -75.65020824175008, 6.172793898407272], "geometry": {"coordinates": [-75.65020824175008, 6.172793898407272], "type": "Point"}, "id": "7", "properties": {"NOMBRE": "CC", "Promedio": "19.5 $\\mu g/m^3$", "alturaNi_1": "6 m", "alturaNive": "1868 msnm", "codigoSeri": "251"}, "type": "Feature"}, {"bbox": [-75.55003, 6.29106, -75.55003, 6.29106], "geometry": {"coordinates": [-75.55003, 6.29106], "type": "Point"}, "id": "8", "properties": {"NOMBRE": "CC", "Promedio": "20.2 $\\mu g/m^3$", "alturaNi_1": "3 m", "alturaNive": "1666 msnm", "codigoSeri": "163"}, "type": "Feature"}, {"bbox": [-75.62915559858082, 6.165272960636077, -75.62915559858082, 6.165272960636077], "geometry": {"coordinates": [-75.62915559858082, 6.165272960636077], "type": "Point"}, "id": "9", "properties": {"NOMBRE": "CC", "Promedio": "13.9 $\\mu g/m^3$", "alturaNi_1": "17 m", "alturaNive": "1707 msnm", "codigoSeri": "167"}, "type": "Feature"}, {"bbox": [-75.56627623736857, 6.294807777220306, -75.56627623736857, 6.294807777220306], "geometry": {"coordinates": [-75.56627623736857, 6.294807777220306], "type": "Point"}, "id": "10", "properties": {"NOMBRE": "CC", "Promedio": "nan $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1559 msnm", "codigoSeri": "73"}, "type": "Feature"}, {"bbox": [-75.57248353, 6.234285206, -75.57248353, 6.234285206], "geometry": {"coordinates": [-75.57248353, 6.234285206], "type": "Point"}, "id": "11", "properties": {"NOMBRE": "CC", "Promedio": "23.9 $\\mu g/m^3$", "alturaNi_1": "7 m", "alturaNive": "1488 msnm", "codigoSeri": "75"}, "type": "Feature"}, {"bbox": [-75.59029, 6.24633, -75.59029, 6.24633], "geometry": {"coordinates": [-75.59029, 6.24633], "type": "Point"}, "id": "12", "properties": {"NOMBRE": "CC", "Promedio": "24.3 $\\mu g/m^3$", "alturaNi_1": "7 m", "alturaNive": "1511 msnm", "codigoSeri": "76"}, "type": "Feature"}, {"bbox": [-75.57407, 6.16492, -75.57407, 6.16492], "geometry": {"coordinates": [-75.57407, 6.16492], "type": "Point"}, "id": "13", "properties": {"NOMBRE": "CC", "Promedio": "nan $\\mu g/m^3$", "alturaNi_1": "7 m", "alturaNive": "1478 msnm", "codigoSeri": "78"}, "type": "Feature"}, {"bbox": [-75.57755, 6.25771, -75.57755, 6.25771], "geometry": {"coordinates": [-75.57755, 6.25771], "type": "Point"}, "id": "14", "properties": {"NOMBRE": "CC", "Promedio": "25.7 $\\mu g/m^3$", "alturaNi_1": "8 m", "alturaNive": "1480 msnm", "codigoSeri": "120"}, "type": "Feature"}, {"bbox": [-75.5786656960845, 6.282402555777438, -75.5786656960845, 6.282402555777438], "geometry": {"coordinates": [-75.5786656960845, 6.282402555777438], "type": "Point"}, "id": "15", "properties": {"NOMBRE": "CC", "Promedio": "19.8 $\\mu g/m^3$", "alturaNi_1": "7 m", "alturaNive": "1592 msnm", "codigoSeri": "128"}, "type": "Feature"}, {"bbox": [-75.54677959531546, 6.307799216332705, -75.54677959531546, 6.307799216332705], "geometry": {"coordinates": [-75.54677959531546, 6.307799216332705], "type": "Point"}, "id": "16", "properties": {"NOMBRE": "CC", "Promedio": "21.2 $\\mu g/m^3$", "alturaNi_1": "7 m", "alturaNive": "1595 msnm", "codigoSeri": "185"}, "type": "Feature"}, {"bbox": [-75.62731, 6.16959, -75.62731, 6.16959], "geometry": {"coordinates": [-75.62731, 6.16959], "type": "Point"}, "id": "17", "properties": {"NOMBRE": "CC", "Promedio": "15.4 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1620 msnm", "codigoSeri": "228"}, "type": "Feature"}, {"bbox": [-75.57005, 6.26295, -75.57005, 6.26295], "geometry": {"coordinates": [-75.57005, 6.26295], "type": "Point"}, "id": "18", "properties": {"NOMBRE": "CC", "Promedio": "nan $\\mu g/m^3$", "alturaNi_1": "21 m", "alturaNive": "1493 msnm", "codigoSeri": "184"}, "type": "Feature"}, {"bbox": [-75.60204, 6.15202, -75.60204, 6.15202], "geometry": {"coordinates": [-75.60204, 6.15202], "type": "Point"}, "id": "19", "properties": {"NOMBRE": "CC", "Promedio": "37.3 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1710 msnm", "codigoSeri": "172"}, "type": "Feature"}, {"bbox": [-75.5621, 6.19348, -75.5621, 6.19348], "geometry": {"coordinates": [-75.5621, 6.19348], "type": "Point"}, "id": "20", "properties": {"NOMBRE": "CC", "Promedio": "24.5 $\\mu g/m^3$", "alturaNi_1": "57 m", "alturaNive": "1765 msnm", "codigoSeri": "170"}, "type": "Feature"}, {"bbox": [-75.61927170000001, 6.2550666, -75.61927170000001, 6.2550666], "geometry": {"coordinates": [-75.61927170000001, 6.2550666], "type": "Point"}, "id": "21", "properties": {"NOMBRE": "CC", "Promedio": "23.9 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1584 msnm", "codigoSeri": "2"}, "type": "Feature"}, {"bbox": [-75.61472, 6.24054, -75.61472, 6.24054], "geometry": {"coordinates": [-75.61472, 6.24054], "type": "Point"}, "id": "22", "properties": {"NOMBRE": "CC", "Promedio": "22.9 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1629 msnm", "codigoSeri": "123"}, "type": "Feature"}, {"bbox": [-75.6180052896525, 6.274335961402977, -75.6180052896525, 6.274335961402977], "geometry": {"coordinates": [-75.6180052896525, 6.274335961402977], "type": "Point"}, "id": "23", "properties": {"NOMBRE": "CC", "Promedio": "24.1 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1733 msnm", "codigoSeri": "232"}, "type": "Feature"}, {"bbox": [-75.62772497534752, 6.289758277284548, -75.62772497534752, 6.289758277284548], "geometry": {"coordinates": [-75.62772497534752, 6.289758277284548], "type": "Point"}, "id": "24", "properties": {"NOMBRE": "CC", "Promedio": "27.3 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "2110 msnm", "codigoSeri": "208"}, "type": "Feature"}, {"bbox": [-75.54799731820822, 6.295466288113983, -75.54799731820822, 6.295466288113983], "geometry": {"coordinates": [-75.54799731820822, 6.295466288113983], "type": "Point"}, "id": "25", "properties": {"NOMBRE": "CC", "Promedio": "nan $\\mu g/m^3$", "alturaNi_1": "6 m", "alturaNive": "1721 msnm", "codigoSeri": "156"}, "type": "Feature"}, {"bbox": [-75.55983893573283, 6.285679183968693, -75.55983893573283, 6.285679183968693], "geometry": {"coordinates": [-75.55983893573283, 6.285679183968693], "type": "Point"}, "id": "26", "properties": {"NOMBRE": "CC", "Promedio": "20.1 $\\mu g/m^3$", "alturaNi_1": "3 m", "alturaNive": "1511 msnm", "codigoSeri": "181"}, "type": "Feature"}, {"bbox": [-75.61635, 6.24631, -75.61635, 6.24631], "geometry": {"coordinates": [-75.61635, 6.24631], "type": "Point"}, "id": "27", "properties": {"NOMBRE": "CC", "Promedio": "22.1 $\\mu g/m^3$", "alturaNi_1": "1 m", "alturaNive": "1607 msnm", "codigoSeri": "182"}, "type": "Feature"}, {"bbox": [-75.60385, 6.18965, -75.60385, 6.18965], "geometry": {"coordinates": [-75.60385, 6.18965], "type": "Point"}, "id": "28", "properties": {"NOMBRE": "CC", "Promedio": "32.8 $\\mu g/m^3$", "alturaNi_1": "38 m", "alturaNive": "1619 msnm", "codigoSeri": "157"}, "type": "Feature"}, {"bbox": [-75.68086343613686, 6.345436751909838, -75.68086343613686, 6.345436751909838], "geometry": {"coordinates": [-75.68086343613686, 6.345436751909838], "type": "Point"}, "id": "29", "properties": {"NOMBRE": "CC", "Promedio": "22.0 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "2148 msnm", "codigoSeri": "164"}, "type": "Feature"}, {"bbox": [-75.5808, 6.22336, -75.5808, 6.22336], "geometry": {"coordinates": [-75.5808, 6.22336], "type": "Point"}, "id": "30", "properties": {"NOMBRE": "CC", "Promedio": "23.3 $\\mu g/m^3$", "alturaNi_1": "1 m", "alturaNive": "1419 msnm", "codigoSeri": "224"}, "type": "Feature"}, {"bbox": [-75.56995, 6.3274577, -75.56995, 6.3274577], "geometry": {"coordinates": [-75.56995, 6.3274577], "type": "Point"}, "id": "31", "properties": {"NOMBRE": "CC", "Promedio": "nan $\\mu g/m^3$", "alturaNi_1": "6 m", "alturaNive": "1609 msnm", "codigoSeri": "154"}, "type": "Feature"}, {"bbox": [-75.58791, 6.22054, -75.58791, 6.22054], "geometry": {"coordinates": [-75.58791, 6.22054], "type": "Point"}, "id": "32", "properties": {"NOMBRE": "CC", "Promedio": "nan $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1505 msnm", "codigoSeri": "136"}, "type": "Feature"}, {"bbox": [-75.63732500000003, 6.0929231, -75.63732500000003, 6.0929231], "geometry": {"coordinates": [-75.63732500000003, 6.0929231], "type": "Point"}, "id": "33", "properties": {"NOMBRE": "CC", "Promedio": "17.2 $\\mu g/m^3$", "alturaNi_1": "21 m", "alturaNive": "1725 msnm", "codigoSeri": "5"}, "type": "Feature"}, {"bbox": [-75.59994444444446, 6.2206667, -75.59994444444446, 6.2206667], "geometry": {"coordinates": [-75.59994444444446, 6.2206667], "type": "Point"}, "id": "34", "properties": {"NOMBRE": "CC", "Promedio": "20.7 $\\mu g/m^3$", "alturaNi_1": "11 m", "alturaNive": "1642 msnm", "codigoSeri": "10"}, "type": "Feature"}, {"bbox": [-75.5660033530512, 6.344787453151117, -75.5660033530512, 6.344787453151117], "geometry": {"coordinates": [-75.5660033530512, 6.344787453151117], "type": "Point"}, "id": "35", "properties": {"NOMBRE": "CC", "Promedio": "21.6 $\\mu g/m^3$", "alturaNi_1": "1 m", "alturaNive": "1497 msnm", "codigoSeri": "19"}, "type": "Feature"}, {"bbox": [-75.50690819225566, 6.349323803366188, -75.50690819225566, 6.349323803366188], "geometry": {"coordinates": [-75.50690819225566, 6.349323803366188], "type": "Point"}, "id": "36", "properties": {"NOMBRE": "CC", "Promedio": "22.3 $\\mu g/m^3$", "alturaNi_1": "6 m", "alturaNive": "1444 msnm", "codigoSeri": "82"}, "type": "Feature"}, {"bbox": [-75.63744, 6.10172, -75.63744, 6.10172], "geometry": {"coordinates": [-75.63744, 6.10172], "type": "Point"}, "id": "37", "properties": {"NOMBRE": "CC", "Promedio": "23.2 $\\mu g/m^3$", "alturaNi_1": "6 m", "alturaNive": "1756 msnm", "codigoSeri": "116"}, "type": "Feature"}, {"bbox": [-75.5643802508712, 6.266970932816722, -75.5643802508712, 6.266970932816722], "geometry": {"coordinates": [-75.5643802508712, 6.266970932816722], "type": "Point"}, "id": "38", "properties": {"NOMBRE": "CC", "Promedio": "19.0 $\\mu g/m^3$", "alturaNi_1": "3 m", "alturaNive": "1477 msnm", "codigoSeri": "129"}, "type": "Feature"}, {"bbox": [-75.58061459465533, 6.187528251119058, -75.58061459465533, 6.187528251119058], "geometry": {"coordinates": [-75.58061459465533, 6.187528251119058], "type": "Point"}, "id": "39", "properties": {"NOMBRE": "CC", "Promedio": "21.7 $\\mu g/m^3$", "alturaNi_1": "28 m", "alturaNive": "1632 msnm", "codigoSeri": "159"}, "type": "Feature"}, {"bbox": [-75.58864, 6.259215, -75.58864, 6.259215], "geometry": {"coordinates": [-75.58864, 6.259215], "type": "Point"}, "id": "40", "properties": {"NOMBRE": "CC", "Promedio": "19.4 $\\mu g/m^3$", "alturaNi_1": "0 m", "alturaNive": "0 msnm", "codigoSeri": "194"}, "type": "Feature"}, {"bbox": [-75.62752890000002, 6.1569302, -75.62752890000002, 6.1569302], "geometry": {"coordinates": [-75.62752890000002, 6.1569302], "type": "Point"}, "id": "41", "properties": {"NOMBRE": "CC", "Promedio": "22.2 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1569 msnm", "codigoSeri": "196"}, "type": "Feature"}, {"bbox": [-75.57934929332988, 6.1548888669286645, -75.57934929332988, 6.1548888669286645], "geometry": {"coordinates": [-75.57934929332988, 6.1548888669286645], "type": "Point"}, "id": "42", "properties": {"NOMBRE": "CC", "Promedio": "22.2 $\\mu g/m^3$", "alturaNi_1": "1 m", "alturaNive": "1657 msnm", "codigoSeri": "110"}, "type": "Feature"}, {"bbox": [-75.61138, 6.21921, -75.61138, 6.21921], "geometry": {"coordinates": [-75.61138, 6.21921], "type": "Point"}, "id": "43", "properties": {"NOMBRE": "CC", "Promedio": "23.4 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1635 msnm", "codigoSeri": "132"}, "type": "Feature"}, {"bbox": [-75.5574081838131, 6.24332404486654, -75.5574081838131, 6.24332404486654], "geometry": {"coordinates": [-75.5574081838131, 6.24332404486654], "type": "Point"}, "id": "44", "properties": {"NOMBRE": "CC", "Promedio": "16.2 $\\mu g/m^3$", "alturaNi_1": "15 m", "alturaNive": "1525 msnm", "codigoSeri": "206"}, "type": "Feature"}, {"bbox": [-75.56501023471354, 6.240481760420155, -75.56501023471354, 6.240481760420155], "geometry": {"coordinates": [-75.56501023471354, 6.240481760420155], "type": "Point"}, "id": "45", "properties": {"NOMBRE": "CC", "Promedio": "21.7 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1510 msnm", "codigoSeri": "74"}, "type": "Feature"}, {"bbox": [-75.54930321872234, 6.256639382058491, -75.54930321872234, 6.256639382058491], "geometry": {"coordinates": [-75.54930321872234, 6.256639382058491], "type": "Point"}, "id": "46", "properties": {"NOMBRE": "CC", "Promedio": "17.8 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1690 msnm", "codigoSeri": "140"}, "type": "Feature"}, {"bbox": [-75.59056028723717, 6.284362136549367, -75.59056028723717, 6.284362136549367], "geometry": {"coordinates": [-75.59056028723717, 6.284362136549367], "type": "Point"}, "id": "47", "properties": {"NOMBRE": "CC", "Promedio": "nan $\\mu g/m^3$", "alturaNi_1": "6 m", "alturaNive": "1669 msnm", "codigoSeri": "131"}, "type": "Feature"}, {"bbox": [-75.58864, 6.259215, -75.58864, 6.259215], "geometry": {"coordinates": [-75.58864, 6.259215], "type": "Point"}, "id": "48", "properties": {"NOMBRE": "CC", "Promedio": "21.6 $\\mu g/m^3$", "alturaNi_1": "0 m", "alturaNive": "0 msnm", "codigoSeri": "174"}, "type": "Feature"}, {"bbox": [-75.54482, 6.20206, -75.54482, 6.20206], "geometry": {"coordinates": [-75.54482, 6.20206], "type": "Point"}, "id": "49", "properties": {"NOMBRE": "CC", "Promedio": "20.0 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1974 msnm", "codigoSeri": "134"}, "type": "Feature"}, {"bbox": [-75.63446, 6.13751, -75.63446, 6.13751], "geometry": {"coordinates": [-75.63446, 6.13751], "type": "Point"}, "id": "50", "properties": {"NOMBRE": "CC", "Promedio": "20.6 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1695 msnm", "codigoSeri": "147"}, "type": "Feature"}, {"bbox": [-75.55701725184917, 6.233016024291269, -75.55701725184917, 6.233016024291269], "geometry": {"coordinates": [-75.55701725184917, 6.233016024291269], "type": "Point"}, "id": "51", "properties": {"NOMBRE": "CC", "Promedio": "21.2 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1548 msnm", "codigoSeri": "44"}, "type": "Feature"}, {"bbox": [-75.58704490000002, 6.2704115, -75.58704490000002, 6.2704115], "geometry": {"coordinates": [-75.58704490000002, 6.2704115], "type": "Point"}, "id": "52", "properties": {"NOMBRE": "CC", "Promedio": "17.7 $\\mu g/m^3$", "alturaNi_1": "9 m", "alturaNive": "1549 msnm", "codigoSeri": "4"}, "type": "Feature"}, {"bbox": [-75.56573440037026, 6.314553409620371, -75.56573440037026, 6.314553409620371], "geometry": {"coordinates": [-75.56573440037026, 6.314553409620371], "type": "Point"}, "id": "53", "properties": {"NOMBRE": "CC", "Promedio": "17.6 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1578 msnm", "codigoSeri": "20"}, "type": "Feature"}, {"bbox": [-75.58699361979963, 6.186939420648285, -75.58699361979963, 6.186939420648285], "geometry": {"coordinates": [-75.58699361979963, 6.186939420648285], "type": "Point"}, "id": "54", "properties": {"NOMBRE": "CC", "Promedio": "19.2 $\\mu g/m^3$", "alturaNi_1": "1 m", "alturaNive": "1543 msnm", "codigoSeri": "21"}, "type": "Feature"}, {"bbox": [-75.54041370749474, 6.3453587174062465, -75.54041370749474, 6.3453587174062465], "geometry": {"coordinates": [-75.54041370749474, 6.3453587174062465], "type": "Point"}, "id": "55", "properties": {"NOMBRE": "CC", "Promedio": "13.6 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1501 msnm", "codigoSeri": "53"}, "type": "Feature"}, {"bbox": [-75.59233898605271, 6.166359539930713, -75.59233898605271, 6.166359539930713], "geometry": {"coordinates": [-75.59233898605271, 6.166359539930713], "type": "Point"}, "id": "56", "properties": {"NOMBRE": "CC", "Promedio": "18.9 $\\mu g/m^3$", "alturaNi_1": "3 m", "alturaNive": "1564 msnm", "codigoSeri": "54"}, "type": "Feature"}, {"bbox": [-75.53305976092814, 6.3443297263832505, -75.53305976092814, 6.3443297263832505], "geometry": {"coordinates": [-75.53305976092814, 6.3443297263832505], "type": "Point"}, "id": "57", "properties": {"NOMBRE": "CC", "Promedio": "18.9 $\\mu g/m^3$", "alturaNi_1": "13 m", "alturaNive": "1500 msnm", "codigoSeri": "56"}, "type": "Feature"}, {"bbox": [-75.60169681906702, 6.157056807389162, -75.60169681906702, 6.157056807389162], "geometry": {"coordinates": [-75.60169681906702, 6.157056807389162], "type": "Point"}, "id": "58", "properties": {"NOMBRE": "CC", "Promedio": "13.2 $\\mu g/m^3$", "alturaNi_1": "0 m", "alturaNive": "0 msnm", "codigoSeri": "57"}, "type": "Feature"}, {"bbox": [-75.55970514516956, 6.330849112108699, -75.55970514516956, 6.330849112108699], "geometry": {"coordinates": [-75.55970514516956, 6.330849112108699], "type": "Point"}, "id": "59", "properties": {"NOMBRE": "CC", "Promedio": "19.3 $\\mu g/m^3$", "alturaNi_1": "6 m", "alturaNive": "1481 msnm", "codigoSeri": "87"}, "type": "Feature"}, {"bbox": [-75.55873919925942, 6.3148704136458, -75.55873919925942, 6.3148704136458], "geometry": {"coordinates": [-75.55873919925942, 6.3148704136458], "type": "Point"}, "id": "60", "properties": {"NOMBRE": "CC", "Promedio": "20.3 $\\mu g/m^3$", "alturaNi_1": "30 m", "alturaNive": "1557 msnm", "codigoSeri": "88"}, "type": "Feature"}, {"bbox": [-75.4456029216817, 6.378502226640006, -75.4456029216817, 6.378502226640006], "geometry": {"coordinates": [-75.4456029216817, 6.378502226640006], "type": "Point"}, "id": "61", "properties": {"NOMBRE": "CC", "Promedio": "nan $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "11550 msnm", "codigoSeri": "89"}, "type": "Feature"}, {"bbox": [-75.59885, 6.24059, -75.59885, 6.24059], "geometry": {"coordinates": [-75.59885, 6.24059], "type": "Point"}, "id": "62", "properties": {"NOMBRE": "CC", "Promedio": "18.9 $\\mu g/m^3$", "alturaNi_1": "8 m", "alturaNive": "1571 msnm", "codigoSeri": "150"}, "type": "Feature"}, {"bbox": [-75.57043, 6.31317, -75.57043, 6.31317], "geometry": {"coordinates": [-75.57043, 6.31317], "type": "Point"}, "id": "63", "properties": {"NOMBRE": "CC", "Promedio": "nan $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1640 msnm", "codigoSeri": "161"}, "type": "Feature"}, {"bbox": [-75.58864, 6.259215, -75.58864, 6.259215], "geometry": {"coordinates": [-75.58864, 6.259215], "type": "Point"}, "id": "64", "properties": {"NOMBRE": "CC", "Promedio": "23.1 $\\mu g/m^3$", "alturaNi_1": "0 m", "alturaNive": "0 msnm", "codigoSeri": "186"}, "type": "Feature"}, {"bbox": [-75.6389533728361, 6.154630071138118, -75.6389533728361, 6.154630071138118], "geometry": {"coordinates": [-75.6389533728361, 6.154630071138118], "type": "Point"}, "id": "65", "properties": {"NOMBRE": "CC", "Promedio": "13.0 $\\mu g/m^3$", "alturaNi_1": "6 m", "alturaNive": "1720 msnm", "codigoSeri": "226"}, "type": "Feature"}, {"bbox": [-75.547, 6.22638, -75.547, 6.22638], "geometry": {"coordinates": [-75.547, 6.22638], "type": "Point"}, "id": "66", "properties": {"NOMBRE": "CC", "Promedio": "19.4 $\\mu g/m^3$", "alturaNi_1": "6 m", "alturaNive": "1721 msnm", "codigoSeri": "162"}, "type": "Feature"}, {"bbox": [-75.58864, 6.259215, -75.58864, 6.259215], "geometry": {"coordinates": [-75.58864, 6.259215], "type": "Point"}, "id": "67", "properties": {"NOMBRE": "CC", "Promedio": "15.4 $\\mu g/m^3$", "alturaNi_1": "0 m", "alturaNive": "0 msnm", "codigoSeri": "188"}, "type": "Feature"}, {"bbox": [-75.56527, 6.18159, -75.56527, 6.18159], "geometry": {"coordinates": [-75.56527, 6.18159], "type": "Point"}, "id": "68", "properties": {"NOMBRE": "CC", "Promedio": "15.3 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1732 msnm", "codigoSeri": "237"}, "type": "Feature"}, {"bbox": [-75.56568615138532, 6.270876872279063, -75.56568615138532, 6.270876872279063], "geometry": {"coordinates": [-75.56568615138532, 6.270876872279063], "type": "Point"}, "id": "69", "properties": {"NOMBRE": "CC", "Promedio": "17.1 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1460 msnm", "codigoSeri": "155"}, "type": "Feature"}, {"bbox": [-75.58864, 6.259215, -75.58864, 6.259215], "geometry": {"coordinates": [-75.58864, 6.259215], "type": "Point"}, "id": "70", "properties": {"NOMBRE": "CC", "Promedio": "22.4 $\\mu g/m^3$", "alturaNi_1": "0 m", "alturaNive": "0 msnm", "codigoSeri": "191"}, "type": "Feature"}, {"bbox": [-75.57340551815285, 6.223570140283138, -75.57340551815285, 6.223570140283138], "geometry": {"coordinates": [-75.57340551815285, 6.223570140283138], "type": "Point"}, "id": "71", "properties": {"NOMBRE": "CC", "Promedio": "16.1 $\\mu g/m^3$", "alturaNi_1": "8 m", "alturaNive": "1523 msnm", "codigoSeri": "245"}, "type": "Feature"}, {"bbox": [-75.57842, 6.19299, -75.57842, 6.19299], "geometry": {"coordinates": [-75.57842, 6.19299], "type": "Point"}, "id": "72", "properties": {"NOMBRE": "CC", "Promedio": "21.2 $\\mu g/m^3$", "alturaNi_1": "12 m", "alturaNive": "1594 msnm", "codigoSeri": "33"}, "type": "Feature"}, {"bbox": [-75.60989197343588, 6.258007157806019, -75.60989197343588, 6.258007157806019], "geometry": {"coordinates": [-75.60989197343588, 6.258007157806019], "type": "Point"}, "id": "73", "properties": {"NOMBRE": "CC", "Promedio": "18.4 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1520 msnm", "codigoSeri": "37"}, "type": "Feature"}, {"bbox": [-75.64156, 6.15278, -75.64156, 6.15278], "geometry": {"coordinates": [-75.64156, 6.15278], "type": "Point"}, "id": "74", "properties": {"NOMBRE": "CC", "Promedio": "21.4 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1747 msnm", "codigoSeri": "34"}, "type": "Feature"}, {"bbox": [-75.59482567012309, 6.222499821484264, -75.59482567012309, 6.222499821484264], "geometry": {"coordinates": [-75.59482567012309, 6.222499821484264], "type": "Point"}, "id": "75", "properties": {"NOMBRE": "CC", "Promedio": "17.4 $\\mu g/m^3$", "alturaNi_1": "8 m", "alturaNive": "1542 msnm", "codigoSeri": "42"}, "type": "Feature"}, {"bbox": [-75.51789991557598, 6.1566994645053805, -75.51789991557598, 6.1566994645053805], "geometry": {"coordinates": [-75.51789991557598, 6.1566994645053805], "type": "Point"}, "id": "76", "properties": {"NOMBRE": "CC", "Promedio": "20.0 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "2575 msnm", "codigoSeri": "66"}, "type": "Feature"}, {"bbox": [-75.61104227504984, 6.138387744519807, -75.61104227504984, 6.138387744519807], "geometry": {"coordinates": [-75.61104227504984, 6.138387744519807], "type": "Point"}, "id": "77", "properties": {"NOMBRE": "CC", "Promedio": "23.0 $\\mu g/m^3$", "alturaNi_1": "6 m", "alturaNive": "1674 msnm", "codigoSeri": "71"}, "type": "Feature"}, {"bbox": [-75.61043, 6.15113, -75.61043, 6.15113], "geometry": {"coordinates": [-75.61043, 6.15113], "type": "Point"}, "id": "78", "properties": {"NOMBRE": "CC", "Promedio": "23.6 $\\mu g/m^3$", "alturaNi_1": "38 m", "alturaNive": "1667 msnm", "codigoSeri": "79"}, "type": "Feature"}, {"bbox": [-75.59003, 6.15771, -75.59003, 6.15771], "geometry": {"coordinates": [-75.59003, 6.15771], "type": "Point"}, "id": "79", "properties": {"NOMBRE": "CC", "Promedio": "25.4 $\\mu g/m^3$", "alturaNi_1": "10 m", "alturaNive": "1622 msnm", "codigoSeri": "85"}, "type": "Feature"}, {"bbox": [-75.63457061252849, 6.12175712933764, -75.63457061252849, 6.12175712933764], "geometry": {"coordinates": [-75.63457061252849, 6.12175712933764], "type": "Point"}, "id": "80", "properties": {"NOMBRE": "CC", "Promedio": "17.2 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1566 msnm", "codigoSeri": "114"}, "type": "Feature"}, {"bbox": [-75.54594811052083, 6.277870163822894, -75.54594811052083, 6.277870163822894], "geometry": {"coordinates": [-75.54594811052083, 6.277870163822894], "type": "Point"}, "id": "81", "properties": {"NOMBRE": "CC", "Promedio": "17.5 $\\mu g/m^3$", "alturaNi_1": "8 m", "alturaNive": "1785 msnm", "codigoSeri": "122"}, "type": "Feature"}, {"bbox": [-75.44772, 6.37593, -75.44772, 6.37593], "geometry": {"coordinates": [-75.44772, 6.37593], "type": "Point"}, "id": "82", "properties": {"NOMBRE": "CC", "Promedio": "18.7 $\\mu g/m^3$", "alturaNi_1": "3 m", "alturaNive": "1435 msnm", "codigoSeri": "126"}, "type": "Feature"}, {"bbox": [-75.56079145520924, 6.311083682129691, -75.56079145520924, 6.311083682129691], "geometry": {"coordinates": [-75.56079145520924, 6.311083682129691], "type": "Point"}, "id": "83", "properties": {"NOMBRE": "CC", "Promedio": "20.6 $\\mu g/m^3$", "alturaNi_1": "1 m", "alturaNive": "1518 msnm", "codigoSeri": "139"}, "type": "Feature"}, {"bbox": [-75.57434, 6.22238, -75.57434, 6.22238], "geometry": {"coordinates": [-75.57434, 6.22238], "type": "Point"}, "id": "84", "properties": {"NOMBRE": "CC", "Promedio": "19.1 $\\mu g/m^3$", "alturaNi_1": "43 m", "alturaNive": "1562 msnm", "codigoSeri": "142"}, "type": "Feature"}, {"bbox": [-75.60366, 6.23941, -75.60366, 6.23941], "geometry": {"coordinates": [-75.60366, 6.23941], "type": "Point"}, "id": "85", "properties": {"NOMBRE": "CC", "Promedio": "nan $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1530 msnm", "codigoSeri": "143"}, "type": "Feature"}, {"bbox": [-75.56709, 6.34082, -75.56709, 6.34082], "geometry": {"coordinates": [-75.56709, 6.34082], "type": "Point"}, "id": "86", "properties": {"NOMBRE": "CC", "Promedio": "18.1 $\\mu g/m^3$", "alturaNi_1": "6 m", "alturaNive": "1515 msnm", "codigoSeri": "160"}, "type": "Feature"}, {"bbox": [-75.55555, 6.24722, -75.55555, 6.24722], "geometry": {"coordinates": [-75.55555, 6.24722], "type": "Point"}, "id": "87", "properties": {"NOMBRE": "CC", "Promedio": "17.7 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1529 msnm", "codigoSeri": "171"}, "type": "Feature"}, {"bbox": [-75.55442, 6.25828, -75.55442, 6.25828], "geometry": {"coordinates": [-75.55442, 6.25828], "type": "Point"}, "id": "88", "properties": {"NOMBRE": "CC", "Promedio": "nan $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1627 msnm", "codigoSeri": "238"}, "type": "Feature"}, {"bbox": [-75.54849316082253, 6.237285929336346, -75.54849316082253, 6.237285929336346], "geometry": {"coordinates": [-75.54849316082253, 6.237285929336346], "type": "Point"}, "id": "89", "properties": {"NOMBRE": "CC", "Promedio": "20.5 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1663 msnm", "codigoSeri": "248"}, "type": "Feature"}, {"bbox": [-75.49364, 6.35541, -75.49364, 6.35541], "geometry": {"coordinates": [-75.49364, 6.35541], "type": "Point"}, "id": "90", "properties": {"NOMBRE": "CC", "Promedio": "26.3 $\\mu g/m^3$", "alturaNi_1": "1 m", "alturaNive": "1459 msnm", "codigoSeri": "246"}, "type": "Feature"}, {"bbox": [-75.6412449, 6.1098013, -75.6412449, 6.1098013], "geometry": {"coordinates": [-75.6412449, 6.1098013], "type": "Point"}, "id": "91", "properties": {"NOMBRE": "CC", "Promedio": "18.2 $\\mu g/m^3$", "alturaNi_1": "1 m", "alturaNive": "1846 msnm", "codigoSeri": "241"}, "type": "Feature"}, {"bbox": [-75.5258821696043, 6.235330413860341, -75.5258821696043, 6.235330413860341], "geometry": {"coordinates": [-75.5258821696043, 6.235330413860341], "type": "Point"}, "id": "92", "properties": {"NOMBRE": "CC", "Promedio": "18.3 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1963 msnm", "codigoSeri": "253"}, "type": "Feature"}, {"bbox": [-75.44907, 6.37594, -75.44907, 6.37594], "geometry": {"coordinates": [-75.44907, 6.37594], "type": "Point"}, "id": "93", "properties": {"NOMBRE": "CC", "Promedio": "18.5 $\\mu g/m^3$", "alturaNi_1": "1 m", "alturaNive": "1397 msnm", "codigoSeri": "243"}, "type": "Feature"}, {"bbox": [-75.58114, 6.20171, -75.58114, 6.20171], "geometry": {"coordinates": [-75.58114, 6.20171], "type": "Point"}, "id": "94", "properties": {"NOMBRE": "CC", "Promedio": "20.1 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1527 msnm", "codigoSeri": "137"}, "type": "Feature"}, {"bbox": [-75.56668, 6.21787, -75.56668, 6.21787], "geometry": {"coordinates": [-75.56668, 6.21787], "type": "Point"}, "id": "95", "properties": {"NOMBRE": "CC", "Promedio": "23.0 $\\mu g/m^3$", "alturaNi_1": "8 m", "alturaNive": "1597 msnm", "codigoSeri": "138"}, "type": "Feature"}, {"bbox": [-75.6192, 6.14765, -75.6192, 6.14765], "geometry": {"coordinates": [-75.6192, 6.14765], "type": "Point"}, "id": "96", "properties": {"NOMBRE": "CC", "Promedio": "21.3 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1611 msnm", "codigoSeri": "214"}, "type": "Feature"}, {"bbox": [-75.57002, 6.34842, -75.57002, 6.34842], "geometry": {"coordinates": [-75.57002, 6.34842], "type": "Point"}, "id": "97", "properties": {"NOMBRE": "CC", "Promedio": "20.8 $\\mu g/m^3$", "alturaNi_1": "6 m", "alturaNive": "1517 msnm", "codigoSeri": "225"}, "type": "Feature"}, {"bbox": [-75.6581411640218, 6.1803817585846845, -75.6581411640218, 6.1803817585846845], "geometry": {"coordinates": [-75.6581411640218, 6.1803817585846845], "type": "Point"}, "id": "98", "properties": {"NOMBRE": "CC", "Promedio": "31.3 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1982 msnm", "codigoSeri": "145"}, "type": "Feature"}, {"bbox": [-75.5999158322811, 6.215572451189967, -75.5999158322811, 6.215572451189967], "geometry": {"coordinates": [-75.5999158322811, 6.215572451189967], "type": "Point"}, "id": "99", "properties": {"NOMBRE": "CC", "Promedio": "18.2 $\\mu g/m^3$", "alturaNi_1": "13 m", "alturaNive": "1535 msnm", "codigoSeri": "11"}, "type": "Feature"}, {"bbox": [-75.60439579188824, 6.225368867278675, -75.60439579188824, 6.225368867278675], "geometry": {"coordinates": [-75.60439579188824, 6.225368867278675], "type": "Point"}, "id": "100", "properties": {"NOMBRE": "CC", "Promedio": "22.1 $\\mu g/m^3$", "alturaNi_1": "3 m", "alturaNive": "1584 msnm", "codigoSeri": "12"}, "type": "Feature"}, {"bbox": [-75.60002777777778, 6.2309722, -75.60002777777778, 6.2309722], "geometry": {"coordinates": [-75.60002777777778, 6.2309722], "type": "Point"}, "id": "101", "properties": {"NOMBRE": "CC", "Promedio": "21.8 $\\mu g/m^3$", "alturaNi_1": "6 m", "alturaNive": "1538 msnm", "codigoSeri": "13"}, "type": "Feature"}, {"bbox": [-75.62577479999999, 6.2542535, -75.62577479999999, 6.2542535], "geometry": {"coordinates": [-75.62577479999999, 6.2542535], "type": "Point"}, "id": "102", "properties": {"NOMBRE": "CC", "Promedio": "15.7 $\\mu g/m^3$", "alturaNi_1": "1 m", "alturaNive": "1637 msnm", "codigoSeri": "14"}, "type": "Feature"}, {"bbox": [-75.58815, 6.17345, -75.58815, 6.17345], "geometry": {"coordinates": [-75.58815, 6.17345], "type": "Point"}, "id": "103", "properties": {"NOMBRE": "CC", "Promedio": "20.4 $\\mu g/m^3$", "alturaNi_1": "6 m", "alturaNive": "1573 msnm", "codigoSeri": "29"}, "type": "Feature"}, {"bbox": [-75.57194106280802, 6.196336388390622, -75.57194106280802, 6.196336388390622], "geometry": {"coordinates": [-75.57194106280802, 6.196336388390622], "type": "Point"}, "id": "104", "properties": {"NOMBRE": "CC", "Promedio": "26.2 $\\mu g/m^3$", "alturaNi_1": "28 m", "alturaNive": "1645 msnm", "codigoSeri": "41"}, "type": "Feature"}, {"bbox": [-75.5806850641966, 6.292195053707093, -75.5806850641966, 6.292195053707093], "geometry": {"coordinates": [-75.5806850641966, 6.292195053707093], "type": "Point"}, "id": "105", "properties": {"NOMBRE": "CC", "Promedio": "23.5 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1696 msnm", "codigoSeri": "43"}, "type": "Feature"}, {"bbox": [-75.33079, 6.44031, -75.33079, 6.44031], "geometry": {"coordinates": [-75.33079, 6.44031], "type": "Point"}, "id": "106", "properties": {"NOMBRE": "CC", "Promedio": "22.2 $\\mu g/m^3$", "alturaNi_1": "3 m", "alturaNive": "1301 msnm", "codigoSeri": "62"}, "type": "Feature"}, {"bbox": [-75.60201932392373, 6.23441694868295, -75.60201932392373, 6.23441694868295], "geometry": {"coordinates": [-75.60201932392373, 6.23441694868295], "type": "Point"}, "id": "107", "properties": {"NOMBRE": "CC", "Promedio": "26.8 $\\mu g/m^3$", "alturaNi_1": "8 m", "alturaNive": "1562 msnm", "codigoSeri": "105"}, "type": "Feature"}, {"bbox": [-75.62200516462327, 6.202528056066402, -75.62200516462327, 6.202528056066402], "geometry": {"coordinates": [-75.62200516462327, 6.202528056066402], "type": "Point"}, "id": "108", "properties": {"NOMBRE": "CC", "Promedio": "29.9 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1976 msnm", "codigoSeri": "106"}, "type": "Feature"}, {"bbox": [-75.58111187070608, 6.303538977257853, -75.58111187070608, 6.303538977257853], "geometry": {"coordinates": [-75.58111187070608, 6.303538977257853], "type": "Point"}, "id": "109", "properties": {"NOMBRE": "CC", "Promedio": "23.3 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1680 msnm", "codigoSeri": "133"}, "type": "Feature"}, {"bbox": [-75.59905, 6.26453, -75.59905, 6.26453], "geometry": {"coordinates": [-75.59905, 6.26453], "type": "Point"}, "id": "110", "properties": {"NOMBRE": "CC", "Promedio": "24.1 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1529 msnm", "codigoSeri": "64"}, "type": "Feature"}, {"bbox": [-75.56668961744434, 6.252306674831852, -75.56668961744434, 6.252306674831852], "geometry": {"coordinates": [-75.56668961744434, 6.252306674831852], "type": "Point"}, "id": "111", "properties": {"NOMBRE": "CC", "Promedio": "nan $\\mu g/m^3$", "alturaNi_1": "11 m", "alturaNive": "1540 msnm", "codigoSeri": "77"}, "type": "Feature"}, {"bbox": [-75.61286922544242, 6.26392614607263, -75.61286922544242, 6.26392614607263], "geometry": {"coordinates": [-75.61286922544242, 6.26392614607263], "type": "Point"}, "id": "112", "properties": {"NOMBRE": "CC", "Promedio": "22.2 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1606 msnm", "codigoSeri": "108"}, "type": "Feature"}, {"bbox": [-75.57142068348186, 6.184127255131596, -75.57142068348186, 6.184127255131596], "geometry": {"coordinates": [-75.57142068348186, 6.184127255131596], "type": "Point"}, "id": "113", "properties": {"NOMBRE": "CC", "Promedio": "21.6 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1563 msnm", "codigoSeri": "121"}, "type": "Feature"}, {"bbox": [-75.5853521078825, 6.260286776094707, -75.5853521078825, 6.260286776094707], "geometry": {"coordinates": [-75.5853521078825, 6.260286776094707], "type": "Point"}, "id": "114", "properties": {"NOMBRE": "CC", "Promedio": "nan $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1566 msnm", "codigoSeri": "124"}, "type": "Feature"}, {"bbox": [-75.56376334279777, 6.205090563923764, -75.56376334279777, 6.205090563923764], "geometry": {"coordinates": [-75.56376334279777, 6.205090563923764], "type": "Point"}, "id": "115", "properties": {"NOMBRE": "CC", "Promedio": "21.4 $\\mu g/m^3$", "alturaNi_1": "12 m", "alturaNive": "1592 msnm", "codigoSeri": "125"}, "type": "Feature"}, {"bbox": [-75.58519650898235, 6.205608954516692, -75.58519650898235, 6.205608954516692], "geometry": {"coordinates": [-75.58519650898235, 6.205608954516692], "type": "Point"}, "id": "116", "properties": {"NOMBRE": "CC", "Promedio": "22.7 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1560 msnm", "codigoSeri": "144"}, "type": "Feature"}, {"bbox": [-75.59887, 6.24061, -75.59887, 6.24061], "geometry": {"coordinates": [-75.59887, 6.24061], "type": "Point"}, "id": "117", "properties": {"NOMBRE": "CC", "Promedio": "22.3 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1562 msnm", "codigoSeri": "151"}, "type": "Feature"}, {"bbox": [-75.51819, 6.1421, -75.51819, 6.1421], "geometry": {"coordinates": [-75.51819, 6.1421], "type": "Point"}, "id": "118", "properties": {"NOMBRE": "CC", "Promedio": "20.7 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "2488 msnm", "codigoSeri": "152"}, "type": "Feature"}, {"bbox": [-75.6032324446278, 6.2465433508811214, -75.6032324446278, 6.2465433508811214], "geometry": {"coordinates": [-75.6032324446278, 6.2465433508811214], "type": "Point"}, "id": "119", "properties": {"NOMBRE": "CC", "Promedio": "20.0 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1533 msnm", "codigoSeri": "201"}, "type": "Feature"}, {"bbox": [-75.60219403356314, 6.257644550939054, -75.60219403356314, 6.257644550939054], "geometry": {"coordinates": [-75.60219403356314, 6.257644550939054], "type": "Point"}, "id": "120", "properties": {"NOMBRE": "CC", "Promedio": "18.5 $\\mu g/m^3$", "alturaNi_1": "6 m", "alturaNive": "1526 msnm", "codigoSeri": "222"}, "type": "Feature"}, {"bbox": [-75.56700143963099, 6.166486305819629, -75.56700143963099, 6.166486305819629], "geometry": {"coordinates": [-75.56700143963099, 6.166486305819629], "type": "Point"}, "id": "121", "properties": {"NOMBRE": "CC", "Promedio": "19.9 $\\mu g/m^3$", "alturaNi_1": "1 m", "alturaNive": "1776 msnm", "codigoSeri": "38"}, "type": "Feature"}, {"bbox": [-75.579494, 6.184944, -75.579494, 6.184944], "geometry": {"coordinates": [-75.579494, 6.184944], "type": "Point"}, "id": "122", "properties": {"NOMBRE": "CC", "Promedio": "23.0 $\\mu g/m^3$", "alturaNi_1": "8 m", "alturaNive": "1540 msnm", "codigoSeri": "65"}, "type": "Feature"}, {"bbox": [-75.57397, 6.16486, -75.57397, 6.16486], "geometry": {"coordinates": [-75.57397, 6.16486], "type": "Point"}, "id": "123", "properties": {"NOMBRE": "CC", "Promedio": "23.1 $\\mu g/m^3$", "alturaNi_1": "6 m", "alturaNive": "1652 msnm", "codigoSeri": "97"}, "type": "Feature"}, {"bbox": [-75.58864, 6.259215, -75.58864, 6.259215], "geometry": {"coordinates": [-75.58864, 6.259215], "type": "Point"}, "id": "124", "properties": {"NOMBRE": "CC", "Promedio": "21.5 $\\mu g/m^3$", "alturaNi_1": "0 m", "alturaNive": "0 msnm", "codigoSeri": "193"}, "type": "Feature"}, {"bbox": [-75.61481419270422, 6.205507930798732, -75.61481419270422, 6.205507930798732], "geometry": {"coordinates": [-75.61481419270422, 6.205507930798732], "type": "Point"}, "id": "125", "properties": {"NOMBRE": "CC", "Promedio": "20.7 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1771 msnm", "codigoSeri": "202"}, "type": "Feature"}, {"bbox": [-75.62026675790547, 6.247939391343348, -75.62026675790547, 6.247939391343348], "geometry": {"coordinates": [-75.62026675790547, 6.247939391343348], "type": "Point"}, "id": "126", "properties": {"NOMBRE": "CC", "Promedio": "26.1 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1636 msnm", "codigoSeri": "204"}, "type": "Feature"}, {"bbox": [-75.55110598306781, 6.245232809828044, -75.55110598306781, 6.245232809828044], "geometry": {"coordinates": [-75.55110598306781, 6.245232809828044], "type": "Point"}, "id": "127", "properties": {"NOMBRE": "CC", "Promedio": "24.6 $\\mu g/m^3$", "alturaNi_1": "0 m", "alturaNive": "0 msnm", "codigoSeri": "211"}, "type": "Feature"}, {"bbox": [-75.5413, 6.290284, -75.5413, 6.290284], "geometry": {"coordinates": [-75.5413, 6.290284], "type": "Point"}, "id": "128", "properties": {"NOMBRE": "CC", "Promedio": "19.6 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1917 msnm", "codigoSeri": "223"}, "type": "Feature"}, {"bbox": [-75.5393521924998, 6.330812456639976, -75.5393521924998, 6.330812456639976], "geometry": {"coordinates": [-75.5393521924998, 6.330812456639976], "type": "Point"}, "id": "129", "properties": {"NOMBRE": "CC", "Promedio": "20.2 $\\mu g/m^3$", "alturaNi_1": "19 m", "alturaNive": "1525 msnm", "codigoSeri": "3"}, "type": "Feature"}, {"bbox": [-75.53472343151952, 6.331972161685633, -75.53472343151952, 6.331972161685633], "geometry": {"coordinates": [-75.53472343151952, 6.331972161685633], "type": "Point"}, "id": "130", "properties": {"NOMBRE": "CC", "Promedio": "17.4 $\\mu g/m^3$", "alturaNi_1": "3 m", "alturaNive": "1506 msnm", "codigoSeri": "15"}, "type": "Feature"}, {"bbox": [-75.60405716300009, 6.230120356603877, -75.60405716300009, 6.230120356603877], "geometry": {"coordinates": [-75.60405716300009, 6.230120356603877], "type": "Point"}, "id": "131", "properties": {"NOMBRE": "CC", "Promedio": "29.5 $\\mu g/m^3$", "alturaNi_1": "0 m", "alturaNive": "0 msnm", "codigoSeri": "40"}, "type": "Feature"}, {"bbox": [-75.592623911798, 6.250312372823544, -75.592623911798, 6.250312372823544], "geometry": {"coordinates": [-75.592623911798, 6.250312372823544], "type": "Point"}, "id": "132", "properties": {"NOMBRE": "CC", "Promedio": "20.2 $\\mu g/m^3$", "alturaNi_1": "6 m", "alturaNive": "1522 msnm", "codigoSeri": "109"}, "type": "Feature"}, {"bbox": [-75.58904, 6.27594, -75.58904, 6.27594], "geometry": {"coordinates": [-75.58904, 6.27594], "type": "Point"}, "id": "133", "properties": {"NOMBRE": "CC", "Promedio": "21.4 $\\mu g/m^3$", "alturaNi_1": "17 m", "alturaNive": "1498 msnm", "codigoSeri": "205"}, "type": "Feature"}, {"bbox": [-75.56791, 6.26346, -75.56791, 6.26346], "geometry": {"coordinates": [-75.56791, 6.26346], "type": "Point"}, "id": "134", "properties": {"NOMBRE": "CC", "Promedio": "28.1 $\\mu g/m^3$", "alturaNi_1": "40 m", "alturaNive": "1506 msnm", "codigoSeri": "183"}, "type": "Feature"}, {"bbox": [-75.30417412519455, 6.455678023498182, -75.30417412519455, 6.455678023498182], "geometry": {"coordinates": [-75.30417412519455, 6.455678023498182], "type": "Point"}, "id": "135", "properties": {"NOMBRE": "CC", "Promedio": "13.3 $\\mu g/m^3$", "alturaNi_1": "3 m", "alturaNive": "1334 msnm", "codigoSeri": "48"}, "type": "Feature"}, {"bbox": [-75.38884609937666, 6.4099197821034775, -75.38884609937666, 6.4099197821034775], "geometry": {"coordinates": [-75.38884609937666, 6.4099197821034775], "type": "Point"}, "id": "136", "properties": {"NOMBRE": "CC", "Promedio": "11.2 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1401 msnm", "codigoSeri": "49"}, "type": "Feature"}, {"bbox": [-75.36115631461142, 6.419270065017352, -75.36115631461142, 6.419270065017352], "geometry": {"coordinates": [-75.36115631461142, 6.419270065017352], "type": "Point"}, "id": "137", "properties": {"NOMBRE": "CC", "Promedio": "13.3 $\\mu g/m^3$", "alturaNi_1": "1 m", "alturaNive": "1344 msnm", "codigoSeri": "50"}, "type": "Feature"}, {"bbox": [-75.48259, 6.39219, -75.48259, 6.39219], "geometry": {"coordinates": [-75.48259, 6.39219], "type": "Point"}, "id": "138", "properties": {"NOMBRE": "CC", "Promedio": "12.6 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1614 msnm", "codigoSeri": "235"}, "type": "Feature"}, {"bbox": [-75.32670132815838, 6.4326235065707955, -75.32670132815838, 6.4326235065707955], "geometry": {"coordinates": [-75.32670132815838, 6.4326235065707955], "type": "Point"}, "id": "139", "properties": {"NOMBRE": "CC", "Promedio": "16.0 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1361 msnm", "codigoSeri": "51"}, "type": "Feature"}, {"bbox": [-75.5350586771965, 6.3582289288277805, -75.5350586771965, 6.3582289288277805], "geometry": {"coordinates": [-75.5350586771965, 6.3582289288277805], "type": "Point"}, "id": "140", "properties": {"NOMBRE": "CC", "Promedio": "8.1 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1739 msnm", "codigoSeri": "52"}, "type": "Feature"}, {"bbox": [-75.59808, 6.24775, -75.59808, 6.24775], "geometry": {"coordinates": [-75.59808, 6.24775], "type": "Point"}, "id": "141", "properties": {"NOMBRE": "CC", "Promedio": "13.7 $\\mu g/m^3$", "alturaNi_1": "13 m", "alturaNive": "1540 msnm", "codigoSeri": "63"}, "type": "Feature"}, {"bbox": [-75.44378, 6.37566, -75.44378, 6.37566], "geometry": {"coordinates": [-75.44378, 6.37566], "type": "Point"}, "id": "142", "properties": {"NOMBRE": "CC", "Promedio": "19.0 $\\mu g/m^3$", "alturaNi_1": "8 m", "alturaNive": "1416 msnm", "codigoSeri": "23"}, "type": "Feature"}, {"bbox": [-75.44294, 6.37802, -75.44294, 6.37802], "geometry": {"coordinates": [-75.44294, 6.37802], "type": "Point"}, "id": "143", "properties": {"NOMBRE": "CC", "Promedio": "15.6 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1403 msnm", "codigoSeri": "24"}, "type": "Feature"}, {"bbox": [-75.44739, 6.38056, -75.44739, 6.38056], "geometry": {"coordinates": [-75.44739, 6.38056], "type": "Point"}, "id": "144", "properties": {"NOMBRE": "CC", "Promedio": "16.7 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1415 msnm", "codigoSeri": "25"}, "type": "Feature"}, {"bbox": [-75.51019, 6.34645, -75.51019, 6.34645], "geometry": {"coordinates": [-75.51019, 6.34645], "type": "Point"}, "id": "145", "properties": {"NOMBRE": "CC", "Promedio": "17.0 $\\mu g/m^3$", "alturaNi_1": "3 m", "alturaNive": "1423 msnm", "codigoSeri": "26"}, "type": "Feature"}, {"bbox": [-75.44764245252736, 6.374037015477947, -75.44764245252736, 6.374037015477947], "geometry": {"coordinates": [-75.44764245252736, 6.374037015477947], "type": "Point"}, "id": "146", "properties": {"NOMBRE": "CC", "Promedio": "18.1 $\\mu g/m^3$", "alturaNi_1": "13 m", "alturaNive": "1555 msnm", "codigoSeri": "90"}, "type": "Feature"}, {"bbox": [-75.5098908086802, 6.340376476889772, -75.5098908086802, 6.340376476889772], "geometry": {"coordinates": [-75.5098908086802, 6.340376476889772], "type": "Point"}, "id": "147", "properties": {"NOMBRE": "CC", "Promedio": "17.8 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1520 msnm", "codigoSeri": "91"}, "type": "Feature"}, {"bbox": [-75.52145, 6.31086, -75.52145, 6.31086], "geometry": {"coordinates": [-75.52145, 6.31086], "type": "Point"}, "id": "148", "properties": {"NOMBRE": "CC", "Promedio": "18.3 $\\mu g/m^3$", "alturaNi_1": "1 m", "alturaNive": "2164 msnm", "codigoSeri": "101"}, "type": "Feature"}, {"bbox": [-75.56585, 6.22574, -75.56585, 6.22574], "geometry": {"coordinates": [-75.56585, 6.22574], "type": "Point"}, "id": "149", "properties": {"NOMBRE": "CC", "Promedio": "16.6 $\\mu g/m^3$", "alturaNi_1": "20 m", "alturaNive": "1586 msnm", "codigoSeri": "127"}, "type": "Feature"}, {"bbox": [-75.56617, 6.33529, -75.56617, 6.33529], "geometry": {"coordinates": [-75.56617, 6.33529], "type": "Point"}, "id": "150", "properties": {"NOMBRE": "CC", "Promedio": "21.6 $\\mu g/m^3$", "alturaNi_1": "6 m", "alturaNive": "1532 msnm", "codigoSeri": "244"}, "type": "Feature"}, {"bbox": [-75.63305, 6.08443, -75.63305, 6.08443], "geometry": {"coordinates": [-75.63305, 6.08443], "type": "Point"}, "id": "151", "properties": {"NOMBRE": "CC", "Promedio": "18.1 $\\mu g/m^3$", "alturaNi_1": "13 m", "alturaNive": "1793 msnm", "codigoSeri": "16"}, "type": "Feature"}, {"bbox": [-75.570485170756, 6.180399940067588, -75.570485170756, 6.180399940067588], "geometry": {"coordinates": [-75.570485170756, 6.180399940067588], "type": "Point"}, "id": "152", "properties": {"NOMBRE": "CC", "Promedio": "24.5 $\\mu g/m^3$", "alturaNi_1": "6 m", "alturaNive": "1573 msnm", "codigoSeri": "27"}, "type": "Feature"}, {"bbox": [-75.57939525693655, 6.199453563501617, -75.57939525693655, 6.199453563501617], "geometry": {"coordinates": [-75.57939525693655, 6.199453563501617], "type": "Point"}, "id": "153", "properties": {"NOMBRE": "CC", "Promedio": "22.1 $\\mu g/m^3$", "alturaNi_1": "0 m", "alturaNive": "0 msnm", "codigoSeri": "32"}, "type": "Feature"}, {"bbox": [-75.64378, 6.16395, -75.64378, 6.16395], "geometry": {"coordinates": [-75.64378, 6.16395], "type": "Point"}, "id": "154", "properties": {"NOMBRE": "CC", "Promedio": "17.9 $\\mu g/m^3$", "alturaNi_1": "6 m", "alturaNive": "1790 msnm", "codigoSeri": "69"}, "type": "Feature"}, {"bbox": [-75.60718, 6.15433, -75.60718, 6.15433], "geometry": {"coordinates": [-75.60718, 6.15433], "type": "Point"}, "id": "155", "properties": {"NOMBRE": "CC", "Promedio": "24.3 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1622 msnm", "codigoSeri": "83"}, "type": "Feature"}, {"bbox": [-75.61144, 6.19023, -75.61144, 6.19023], "geometry": {"coordinates": [-75.61144, 6.19023], "type": "Point"}, "id": "156", "properties": {"NOMBRE": "CC", "Promedio": "17.4 $\\mu g/m^3$", "alturaNi_1": "7 m", "alturaNive": "1730 msnm", "codigoSeri": "92"}, "type": "Feature"}, {"bbox": [-75.59450682252645, 6.170926325512769, -75.59450682252645, 6.170926325512769], "geometry": {"coordinates": [-75.59450682252645, 6.170926325512769], "type": "Point"}, "id": "157", "properties": {"NOMBRE": "CC", "Promedio": "15.6 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1563 msnm", "codigoSeri": "102"}, "type": "Feature"}, {"bbox": [-75.58864, 6.259215, -75.58864, 6.259215], "geometry": {"coordinates": [-75.58864, 6.259215], "type": "Point"}, "id": "158", "properties": {"NOMBRE": "CC", "Promedio": "18.8 $\\mu g/m^3$", "alturaNi_1": "0 m", "alturaNive": "0 msnm", "codigoSeri": "189"}, "type": "Feature"}, {"bbox": [-75.58864, 6.259215, -75.58864, 6.259215], "geometry": {"coordinates": [-75.58864, 6.259215], "type": "Point"}, "id": "159", "properties": {"NOMBRE": "CC", "Promedio": "16.2 $\\mu g/m^3$", "alturaNi_1": "0 m", "alturaNive": "0 msnm", "codigoSeri": "190"}, "type": "Feature"}, {"bbox": [-75.59435661882162, 6.260636050064706, -75.59435661882162, 6.260636050064706], "geometry": {"coordinates": [-75.59435661882162, 6.260636050064706], "type": "Point"}, "id": "160", "properties": {"NOMBRE": "CC", "Promedio": "nan $\\mu g/m^3$", "alturaNi_1": "8 m", "alturaNive": "1526 msnm", "codigoSeri": "221"}, "type": "Feature"}, {"bbox": [-75.56679, 6.21407, -75.56679, 6.21407], "geometry": {"coordinates": [-75.56679, 6.21407], "type": "Point"}, "id": "161", "properties": {"NOMBRE": "CC", "Promedio": "16.4 $\\mu g/m^3$", "alturaNi_1": "23 m", "alturaNive": "1761 msnm", "codigoSeri": "247"}, "type": "Feature"}, {"bbox": [-75.54239416818746, 6.234412403778335, -75.54239416818746, 6.234412403778335], "geometry": {"coordinates": [-75.54239416818746, 6.234412403778335], "type": "Point"}, "id": "162", "properties": {"NOMBRE": "CC", "Promedio": "16.8 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1660 msnm", "codigoSeri": "250"}, "type": "Feature"}, {"bbox": [-75.60294235448963, 6.220861857401669, -75.60294235448963, 6.220861857401669], "geometry": {"coordinates": [-75.60294235448963, 6.220861857401669], "type": "Point"}, "id": "163", "properties": {"NOMBRE": "CC", "Promedio": "15.7 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1573 msnm", "codigoSeri": "28"}, "type": "Feature"}, {"bbox": [-75.63342, 6.08584, -75.63342, 6.08584], "geometry": {"coordinates": [-75.63342, 6.08584], "type": "Point"}, "id": "164", "properties": {"NOMBRE": "CC", "Promedio": "23.9 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1792 msnm", "codigoSeri": "30"}, "type": "Feature"}, {"bbox": [-75.5551765859127, 6.344804235452267, -75.5551765859127, 6.344804235452267], "geometry": {"coordinates": [-75.5551765859127, 6.344804235452267], "type": "Point"}, "id": "165", "properties": {"NOMBRE": "CC", "Promedio": "21.0 $\\mu g/m^3$", "alturaNi_1": "0 m", "alturaNive": "0 msnm", "codigoSeri": "55"}, "type": "Feature"}, {"bbox": [-75.59025518596174, 6.183632842873067, -75.59025518596174, 6.183632842873067], "geometry": {"coordinates": [-75.59025518596174, 6.183632842873067], "type": "Point"}, "id": "166", "properties": {"NOMBRE": "CC", "Promedio": "22.5 $\\mu g/m^3$", "alturaNi_1": "6 m", "alturaNive": "1548 msnm", "codigoSeri": "58"}, "type": "Feature"}, {"bbox": [-75.61857160180806, 6.140829464817477, -75.61857160180806, 6.140829464817477], "geometry": {"coordinates": [-75.61857160180806, 6.140829464817477], "type": "Point"}, "id": "167", "properties": {"NOMBRE": "CC", "Promedio": "9.9 $\\mu g/m^3$", "alturaNi_1": "37 m", "alturaNive": "1579 msnm", "codigoSeri": "67"}, "type": "Feature"}, {"bbox": [-75.56186129055277, 6.322761519769556, -75.56186129055277, 6.322761519769556], "geometry": {"coordinates": [-75.56186129055277, 6.322761519769556], "type": "Point"}, "id": "168", "properties": {"NOMBRE": "CC", "Promedio": "23.2 $\\mu g/m^3$", "alturaNi_1": "13 m", "alturaNive": "1493 msnm", "codigoSeri": "86"}, "type": "Feature"}, {"bbox": [-75.60124, 6.25243, -75.60124, 6.25243], "geometry": {"coordinates": [-75.60124, 6.25243], "type": "Point"}, "id": "169", "properties": {"NOMBRE": "CC", "Promedio": "24.4 $\\mu g/m^3$", "alturaNi_1": "7 m", "alturaNive": "1539 msnm", "codigoSeri": "96"}, "type": "Feature"}, {"bbox": [-75.64254, 6.1519, -75.64254, 6.1519], "geometry": {"coordinates": [-75.64254, 6.1519], "type": "Point"}, "id": "170", "properties": {"NOMBRE": "CC", "Promedio": "21.4 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1759 msnm", "codigoSeri": "98"}, "type": "Feature"}, {"bbox": [-75.59692, 6.25888, -75.59692, 6.25888], "geometry": {"coordinates": [-75.59692, 6.25888], "type": "Point"}, "id": "171", "properties": {"NOMBRE": "CC", "Promedio": "23.7 $\\mu g/m^3$", "alturaNi_1": "15 m", "alturaNive": "1519 msnm", "codigoSeri": "103"}, "type": "Feature"}, {"bbox": [-75.60028125248208, 6.17902868978049, -75.60028125248208, 6.17902868978049], "geometry": {"coordinates": [-75.60028125248208, 6.17902868978049], "type": "Point"}, "id": "172", "properties": {"NOMBRE": "CC", "Promedio": "16.8 $\\mu g/m^3$", "alturaNi_1": "6 m", "alturaNive": "1562 msnm", "codigoSeri": "111"}, "type": "Feature"}, {"bbox": [-75.55838, 6.19331, -75.55838, 6.19331], "geometry": {"coordinates": [-75.55838, 6.19331], "type": "Point"}, "id": "173", "properties": {"NOMBRE": "CC", "Promedio": "15.6 $\\mu g/m^3$", "alturaNi_1": "50 m", "alturaNive": "1845 msnm", "codigoSeri": "113"}, "type": "Feature"}, {"bbox": [-75.56362386792898, 6.249992420892139, -75.56362386792898, 6.249992420892139], "geometry": {"coordinates": [-75.56362386792898, 6.249992420892139], "type": "Point"}, "id": "174", "properties": {"NOMBRE": "CC", "Promedio": "15.3 $\\mu g/m^3$", "alturaNi_1": "8 m", "alturaNive": "1680 msnm", "codigoSeri": "119"}, "type": "Feature"}, {"bbox": [-75.57325836271049, 6.294277235447693, -75.57325836271049, 6.294277235447693], "geometry": {"coordinates": [-75.57325836271049, 6.294277235447693], "type": "Point"}, "id": "175", "properties": {"NOMBRE": "CC", "Promedio": "15.7 $\\mu g/m^3$", "alturaNi_1": "8 m", "alturaNive": "1608 msnm", "codigoSeri": "130"}, "type": "Feature"}, {"bbox": [-75.55477492511271, 6.303904218149749, -75.55477492511271, 6.303904218149749], "geometry": {"coordinates": [-75.55477492511271, 6.303904218149749], "type": "Point"}, "id": "176", "properties": {"NOMBRE": "CC", "Promedio": "8.9 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1512 msnm", "codigoSeri": "153"}, "type": "Feature"}, {"bbox": [-75.55496264896645, 6.276628838998206, -75.55496264896645, 6.276628838998206], "geometry": {"coordinates": [-75.55496264896645, 6.276628838998206], "type": "Point"}, "id": "177", "properties": {"NOMBRE": "CC", "Promedio": "7.5 $\\mu g/m^3$", "alturaNi_1": "6 m", "alturaNive": "1597 msnm", "codigoSeri": "180"}, "type": "Feature"}, {"bbox": [-75.60542680000003, 6.1589601, -75.60542680000003, 6.1589601], "geometry": {"coordinates": [-75.60542680000003, 6.1589601], "type": "Point"}, "id": "178", "properties": {"NOMBRE": "CC", "Promedio": "17.3 $\\mu g/m^3$", "alturaNi_1": "15 m", "alturaNive": "1506 msnm", "codigoSeri": "219"}, "type": "Feature"}, {"bbox": [-75.57939844205977, 6.19617639601467, -75.57939844205977, 6.19617639601467], "geometry": {"coordinates": [-75.57939844205977, 6.19617639601467], "type": "Point"}, "id": "179", "properties": {"NOMBRE": "CC", "Promedio": "15.0 $\\mu g/m^3$", "alturaNi_1": "3 m", "alturaNive": "1529 msnm", "codigoSeri": "240"}, "type": "Feature"}, {"bbox": [-75.60786748450481, 6.243797676614939, -75.60786748450481, 6.243797676614939], "geometry": {"coordinates": [-75.60786748450481, 6.243797676614939], "type": "Point"}, "id": "180", "properties": {"NOMBRE": "CC", "Promedio": "16.1 $\\mu g/m^3$", "alturaNi_1": "8 m", "alturaNive": "1545 msnm", "codigoSeri": "210"}, "type": "Feature"}, {"bbox": [-75.64021, 6.15754, -75.64021, 6.15754], "geometry": {"coordinates": [-75.64021, 6.15754], "type": "Point"}, "id": "181", "properties": {"NOMBRE": "CC", "Promedio": "18.8 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1742 msnm", "codigoSeri": "35"}, "type": "Feature"}, {"bbox": [-75.56139, 6.20957, -75.56139, 6.20957], "geometry": {"coordinates": [-75.56139, 6.20957], "type": "Point"}, "id": "182", "properties": {"NOMBRE": "CC", "Promedio": "23.4 $\\mu g/m^3$", "alturaNi_1": "9 m", "alturaNive": "1647 msnm", "codigoSeri": "36"}, "type": "Feature"}, {"bbox": [-75.56729547679423, 6.166566306503407, -75.56729547679423, 6.166566306503407], "geometry": {"coordinates": [-75.56729547679423, 6.166566306503407], "type": "Point"}, "id": "183", "properties": {"NOMBRE": "CC", "Promedio": "20.2 $\\mu g/m^3$", "alturaNi_1": "1 m", "alturaNive": "1776 msnm", "codigoSeri": "60"}, "type": "Feature"}, {"bbox": [-75.68384, 6.17988, -75.68384, 6.17988], "geometry": {"coordinates": [-75.68384, 6.17988], "type": "Point"}, "id": "184", "properties": {"NOMBRE": "CC", "Promedio": "19.4 $\\mu g/m^3$", "alturaNi_1": "37 m", "alturaNive": "1604 msnm", "codigoSeri": "95"}, "type": "Feature"}, {"bbox": [-75.6419, 6.16215, -75.6419, 6.16215], "geometry": {"coordinates": [-75.6419, 6.16215], "type": "Point"}, "id": "185", "properties": {"NOMBRE": "CC", "Promedio": "20.5 $\\mu g/m^3$", "alturaNi_1": "3 m", "alturaNive": "1765 msnm", "codigoSeri": "99"}, "type": "Feature"}, {"bbox": [-75.4527, 6.36524, -75.4527, 6.36524], "geometry": {"coordinates": [-75.4527, 6.36524], "type": "Point"}, "id": "186", "properties": {"NOMBRE": "CC", "Promedio": "23.2 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1597 msnm", "codigoSeri": "100"}, "type": "Feature"}, {"bbox": [-75.58103911578654, 6.274374862853287, -75.58103911578654, 6.274374862853287], "geometry": {"coordinates": [-75.58103911578654, 6.274374862853287], "type": "Point"}, "id": "187", "properties": {"NOMBRE": "CC", "Promedio": "53.0 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1566 msnm", "codigoSeri": "115"}, "type": "Feature"}, {"bbox": [-75.61245, 6.1453, -75.61245, 6.1453], "geometry": {"coordinates": [-75.61245, 6.1453], "type": "Point"}, "id": "188", "properties": {"NOMBRE": "CC", "Promedio": "19.1 $\\mu g/m^3$", "alturaNi_1": "30 m", "alturaNive": "1805 msnm", "codigoSeri": "148"}, "type": "Feature"}, {"bbox": [-75.65645, 6.16009, -75.65645, 6.16009], "geometry": {"coordinates": [-75.65645, 6.16009], "type": "Point"}, "id": "189", "properties": {"NOMBRE": "CC", "Promedio": "19.5 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1972 msnm", "codigoSeri": "199"}, "type": "Feature"}, {"bbox": [-75.58990299989999, 6.2458412999999, -75.58990299989999, 6.2458412999999], "geometry": {"coordinates": [-75.58990299989999, 6.2458412999999], "type": "Point"}, "id": "190", "properties": {"NOMBRE": "CC", "Promedio": "15.3 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1532 msnm", "codigoSeri": "200"}, "type": "Feature"}, {"bbox": [-75.58638, 6.16491, -75.58638, 6.16491], "geometry": {"coordinates": [-75.58638, 6.16491], "type": "Point"}, "id": "191", "properties": {"NOMBRE": "CC", "Promedio": "20.3 $\\mu g/m^3$", "alturaNi_1": "1 m", "alturaNive": "1633 msnm", "codigoSeri": "218"}, "type": "Feature"}, {"bbox": [-75.616667, 6.163374, -75.616667, 6.163374], "geometry": {"coordinates": [-75.616667, 6.163374], "type": "Point"}, "id": "192", "properties": {"NOMBRE": "CC", "Promedio": "18.0 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1581 msnm", "codigoSeri": "230"}, "type": "Feature"}, {"bbox": [-75.57549, 6.21016, -75.57549, 6.21016], "geometry": {"coordinates": [-75.57549, 6.21016], "type": "Point"}, "id": "193", "properties": {"NOMBRE": "CC", "Promedio": "23.6 $\\mu g/m^3$", "alturaNi_1": "18 m", "alturaNive": "1527 msnm", "codigoSeri": "70"}, "type": "Feature"}, {"bbox": [-75.63911, 6.15211, -75.63911, 6.15211], "geometry": {"coordinates": [-75.63911, 6.15211], "type": "Point"}, "id": "194", "properties": {"NOMBRE": "CC", "Promedio": "19.3 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1698 msnm", "codigoSeri": "198"}, "type": "Feature"}, {"bbox": [-75.57321169777424, 6.242367811490909, -75.57321169777424, 6.242367811490909], "geometry": {"coordinates": [-75.57321169777424, 6.242367811490909], "type": "Point"}, "id": "195", "properties": {"NOMBRE": "CC", "Promedio": "19.6 $\\mu g/m^3$", "alturaNi_1": "8 m", "alturaNive": "1526 msnm", "codigoSeri": "227"}, "type": "Feature"}, {"bbox": [-75.33285733312368, 6.437850177308536, -75.33285733312368, 6.437850177308536], "geometry": {"coordinates": [-75.33285733312368, 6.437850177308536], "type": "Point"}, "id": "196", "properties": {"NOMBRE": "CC", "Promedio": "22.7 $\\mu g/m^3$", "alturaNi_1": "3 m", "alturaNive": "1312 msnm", "codigoSeri": "47"}, "type": "Feature"}, {"bbox": [-75.6396, 6.17077, -75.6396, 6.17077], "geometry": {"coordinates": [-75.6396, 6.17077], "type": "Point"}, "id": "197", "properties": {"NOMBRE": "CC", "Promedio": "23.4 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1715 msnm", "codigoSeri": "46"}, "type": "Feature"}, {"bbox": [-75.64505808055402, 6.148240501592888, -75.64505808055402, 6.148240501592888], "geometry": {"coordinates": [-75.64505808055402, 6.148240501592888], "type": "Point"}, "id": "198", "properties": {"NOMBRE": "CC", "Promedio": "27.3 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1579 msnm", "codigoSeri": "59"}, "type": "Feature"}, {"bbox": [-75.60112, 6.26559, -75.60112, 6.26559], "geometry": {"coordinates": [-75.60112, 6.26559], "type": "Point"}, "id": "199", "properties": {"NOMBRE": "CC", "Promedio": "29.8 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1510 msnm", "codigoSeri": "93"}, "type": "Feature"}, {"bbox": [-75.57438, 6.1729, -75.57438, 6.1729], "geometry": {"coordinates": [-75.57438, 6.1729], "type": "Point"}, "id": "200", "properties": {"NOMBRE": "CC", "Promedio": "24.2 $\\mu g/m^3$", "alturaNi_1": "22 m", "alturaNive": "1649 msnm", "codigoSeri": "112"}, "type": "Feature"}, {"bbox": [-75.60171827673909, 6.288393250926883, -75.60171827673909, 6.288393250926883], "geometry": {"coordinates": [-75.60171827673909, 6.288393250926883], "type": "Point"}, "id": "201", "properties": {"NOMBRE": "CC", "Promedio": "23.8 $\\mu g/m^3$", "alturaNi_1": "3 m", "alturaNive": "1872 msnm", "codigoSeri": "158"}, "type": "Feature"}, {"bbox": [-75.608693, 6.179644, -75.608693, 6.179644], "geometry": {"coordinates": [-75.608693, 6.179644], "type": "Point"}, "id": "202", "properties": {"NOMBRE": "CC", "Promedio": "21.3 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1622 msnm", "codigoSeri": "216"}, "type": "Feature"}, {"bbox": [-75.6398603, 6.1576567, -75.6398603, 6.1576567], "geometry": {"coordinates": [-75.6398603, 6.1576567], "type": "Point"}, "id": "203", "properties": {"NOMBRE": "CC", "Promedio": "21.2 $\\mu g/m^3$", "alturaNi_1": "1 m", "alturaNive": "1642 msnm", "codigoSeri": "217"}, "type": "Feature"}, {"bbox": [-75.55508, 6.26256, -75.55508, 6.26256], "geometry": {"coordinates": [-75.55508, 6.26256], "type": "Point"}, "id": "204", "properties": {"NOMBRE": "CC", "Promedio": "22.9 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1528 msnm", "codigoSeri": "231"}, "type": "Feature"}, {"bbox": [-75.58864, 6.259215, -75.58864, 6.259215], "geometry": {"coordinates": [-75.58864, 6.259215], "type": "Point"}, "id": "205", "properties": {"NOMBRE": "CC", "Promedio": "21.9 $\\mu g/m^3$", "alturaNi_1": "0 m", "alturaNive": "0 msnm", "codigoSeri": "168"}, "type": "Feature"}, {"bbox": [-75.61797, 6.28172, -75.61797, 6.28172], "geometry": {"coordinates": [-75.61797, 6.28172], "type": "Point"}, "id": "206", "properties": {"NOMBRE": "CC", "Promedio": "19.2 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1839 msnm", "codigoSeri": "178"}, "type": "Feature"}, {"bbox": [-75.62788, 6.15624, -75.62788, 6.15624], "geometry": {"coordinates": [-75.62788, 6.15624], "type": "Point"}, "id": "207", "properties": {"NOMBRE": "CC", "Promedio": "26.2 $\\mu g/m^3$", "alturaNi_1": "22 m", "alturaNive": "1722 msnm", "codigoSeri": "197"}, "type": "Feature"}, {"bbox": [-75.64824, 6.1541, -75.64824, 6.1541], "geometry": {"coordinates": [-75.64824, 6.1541], "type": "Point"}, "id": "208", "properties": {"NOMBRE": "CC", "Promedio": "20.8 $\\mu g/m^3$", "alturaNi_1": "30 m", "alturaNive": "1976 msnm", "codigoSeri": "229"}, "type": "Feature"}, {"bbox": [-75.65322272479534, 6.272615205894862, -75.65322272479534, 6.272615205894862], "geometry": {"coordinates": [-75.65322272479534, 6.272615205894862], "type": "Point"}, "id": "209", "properties": {"NOMBRE": "CC", "Promedio": "29.7 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "2040 msnm", "codigoSeri": "176"}, "type": "Feature"}, {"bbox": [-75.49692, 6.38871, -75.49692, 6.38871], "geometry": {"coordinates": [-75.49692, 6.38871], "type": "Point"}, "id": "210", "properties": {"NOMBRE": "CC", "Promedio": "20.3 $\\mu g/m^3$", "alturaNi_1": "3 m", "alturaNive": "1691 msnm", "codigoSeri": "68"}, "type": "Feature"}, {"bbox": [-75.5748424808553, 6.245336613364626, -75.5748424808553, 6.245336613364626], "geometry": {"coordinates": [-75.5748424808553, 6.245336613364626], "type": "Point"}, "id": "211", "properties": {"NOMBRE": "CC", "Promedio": "19.6 $\\mu g/m^3$", "alturaNi_1": "35 m", "alturaNive": "1580 msnm", "codigoSeri": "72"}, "type": "Feature"}, {"bbox": [-75.60854, 6.26979, -75.60854, 6.26979], "geometry": {"coordinates": [-75.60854, 6.26979], "type": "Point"}, "id": "212", "properties": {"NOMBRE": "CC", "Promedio": "22.8 $\\mu g/m^3$", "alturaNi_1": "49 m", "alturaNive": "1761 msnm", "codigoSeri": "80"}, "type": "Feature"}, {"bbox": [-75.5660217627883, 6.217089654413412, -75.5660217627883, 6.217089654413412], "geometry": {"coordinates": [-75.5660217627883, 6.217089654413412], "type": "Point"}, "id": "213", "properties": {"NOMBRE": "CC", "Promedio": "19.5 $\\mu g/m^3$", "alturaNi_1": "24 m", "alturaNive": "1638 msnm", "codigoSeri": "84"}, "type": "Feature"}, {"bbox": [-75.57643, 6.17236, -75.57643, 6.17236], "geometry": {"coordinates": [-75.57643, 6.17236], "type": "Point"}, "id": "214", "properties": {"NOMBRE": "CC", "Promedio": "19.7 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1629 msnm", "codigoSeri": "118"}, "type": "Feature"}, {"bbox": [-75.56638, 6.35128, -75.56638, 6.35128], "geometry": {"coordinates": [-75.56638, 6.35128], "type": "Point"}, "id": "215", "properties": {"NOMBRE": "CC", "Promedio": "27.7 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1537 msnm", "codigoSeri": "149"}, "type": "Feature"}, {"bbox": [-75.59474593530467, 6.196434201861579, -75.59474593530467, 6.196434201861579], "geometry": {"coordinates": [-75.59474593530467, 6.196434201861579], "type": "Point"}, "id": "216", "properties": {"NOMBRE": "CC", "Promedio": "20.2 $\\mu g/m^3$", "alturaNi_1": "6 m", "alturaNive": "1556 msnm", "codigoSeri": "213"}, "type": "Feature"}, {"bbox": [-75.51738, 6.34023, -75.51738, 6.34023], "geometry": {"coordinates": [-75.51738, 6.34023], "type": "Point"}, "id": "217", "properties": {"NOMBRE": "CC", "Promedio": "24.1 $\\mu g/m^3$", "alturaNi_1": "3 m", "alturaNive": "1457 msnm", "codigoSeri": "220"}, "type": "Feature"}, {"bbox": [-75.56731, 6.29222, -75.56731, 6.29222], "geometry": {"coordinates": [-75.56731, 6.29222], "type": "Point"}, "id": "218", "properties": {"NOMBRE": "CC", "Promedio": "17.8 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1549 msnm", "codigoSeri": "173"}, "type": "Feature"}, {"bbox": [-75.59473983943462, 6.187302076306954, -75.59473983943462, 6.187302076306954], "geometry": {"coordinates": [-75.59473983943462, 6.187302076306954], "type": "Point"}, "id": "219", "properties": {"NOMBRE": "CC", "Promedio": "21.1 $\\mu g/m^3$", "alturaNi_1": "8 m", "alturaNive": "1598 msnm", "codigoSeri": "215"}, "type": "Feature"}, {"bbox": [-75.58864, 6.259215, -75.58864, 6.259215], "geometry": {"coordinates": [-75.58864, 6.259215], "type": "Point"}, "id": "220", "properties": {"NOMBRE": "CC", "Promedio": "19.5 $\\mu g/m^3$", "alturaNi_1": "0 m", "alturaNive": "0 msnm", "codigoSeri": "256"}, "type": "Feature"}, {"bbox": [-75.58864, 6.259215, -75.58864, 6.259215], "geometry": {"coordinates": [-75.58864, 6.259215], "type": "Point"}, "id": "221", "properties": {"NOMBRE": "CC", "Promedio": "26.6 $\\mu g/m^3$", "alturaNi_1": "0 m", "alturaNive": "0 msnm", "codigoSeri": "6"}, "type": "Feature"}, {"bbox": [-75.58872, 6.27335, -75.58872, 6.27335], "geometry": {"coordinates": [-75.58872, 6.27335], "type": "Point"}, "id": "222", "properties": {"NOMBRE": "CC", "Promedio": "16.8 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1515 msnm", "codigoSeri": "18"}, "type": "Feature"}, {"bbox": [-75.63206, 6.08555, -75.63206, 6.08555], "geometry": {"coordinates": [-75.63206, 6.08555], "type": "Point"}, "id": "223", "properties": {"NOMBRE": "CC", "Promedio": "15.3 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1777 msnm", "codigoSeri": "17"}, "type": "Feature"}, {"bbox": [-75.5204939469695, 6.33923539082543, -75.5204939469695, 6.33923539082543], "geometry": {"coordinates": [-75.5204939469695, 6.33923539082543], "type": "Point"}, "id": "224", "properties": {"NOMBRE": "CC", "Promedio": "18.4 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1498 msnm", "codigoSeri": "31"}, "type": "Feature"}, {"bbox": [-75.62287, 6.14596, -75.62287, 6.14596], "geometry": {"coordinates": [-75.62287, 6.14596], "type": "Point"}, "id": "225", "properties": {"NOMBRE": "CC", "Promedio": "20.9 $\\mu g/m^3$", "alturaNi_1": "6 m", "alturaNive": "1658 msnm", "codigoSeri": "117"}, "type": "Feature"}, {"bbox": [-75.58864, 6.259215, -75.58864, 6.259215], "geometry": {"coordinates": [-75.58864, 6.259215], "type": "Point"}, "id": "226", "properties": {"NOMBRE": "CC", "Promedio": "20.0 $\\mu g/m^3$", "alturaNi_1": "0 m", "alturaNive": "0 msnm", "codigoSeri": "166"}, "type": "Feature"}, {"bbox": [-75.58864, 6.259215, -75.58864, 6.259215], "geometry": {"coordinates": [-75.58864, 6.259215], "type": "Point"}, "id": "227", "properties": {"NOMBRE": "CC", "Promedio": "16.8 $\\mu g/m^3$", "alturaNi_1": "0 m", "alturaNive": "0 msnm", "codigoSeri": "192"}, "type": "Feature"}, {"bbox": [-75.56744028530373, 6.222151612884287, -75.56744028530373, 6.222151612884287], "geometry": {"coordinates": [-75.56744028530373, 6.222151612884287], "type": "Point"}, "id": "228", "properties": {"NOMBRE": "CC", "Promedio": "18.4 $\\mu g/m^3$", "alturaNi_1": "15 m", "alturaNive": "1626 msnm", "codigoSeri": "242"}, "type": "Feature"}, {"bbox": [-75.58864, 6.259215, -75.58864, 6.259215], "geometry": {"coordinates": [-75.58864, 6.259215], "type": "Point"}, "id": "229", "properties": {"NOMBRE": "CC", "Promedio": "24.1 $\\mu g/m^3$", "alturaNi_1": "0 m", "alturaNive": "0 msnm", "codigoSeri": "7"}, "type": "Feature"}, {"bbox": [-75.58864, 6.259215, -75.58864, 6.259215], "geometry": {"coordinates": [-75.58864, 6.259215], "type": "Point"}, "id": "230", "properties": {"NOMBRE": "CC", "Promedio": "21.0 $\\mu g/m^3$", "alturaNi_1": "0 m", "alturaNive": "0 msnm", "codigoSeri": "8"}, "type": "Feature"}, {"bbox": [-75.61052777777778, 6.2891389, -75.61052777777778, 6.2891389], "geometry": {"coordinates": [-75.61052777777778, 6.2891389], "type": "Point"}, "id": "231", "properties": {"NOMBRE": "CC", "Promedio": "21.6 $\\mu g/m^3$", "alturaNi_1": "28 m", "alturaNive": "1887 msnm", "codigoSeri": "9"}, "type": "Feature"}, {"bbox": [-75.43672, 6.36622, -75.43672, 6.36622], "geometry": {"coordinates": [-75.43672, 6.36622], "type": "Point"}, "id": "232", "properties": {"NOMBRE": "CC", "Promedio": "nan $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1458 msnm", "codigoSeri": "22"}, "type": "Feature"}, {"bbox": [-75.5985760834671, 6.209333376982652, -75.5985760834671, 6.209333376982652], "geometry": {"coordinates": [-75.5985760834671, 6.209333376982652], "type": "Point"}, "id": "233", "properties": {"NOMBRE": "CC", "Promedio": "21.6 $\\mu g/m^3$", "alturaNi_1": "23 m", "alturaNive": "1532 msnm", "codigoSeri": "61"}, "type": "Feature"}, {"bbox": [-75.57264377079262, 6.300527487222188, -75.57264377079262, 6.300527487222188], "geometry": {"coordinates": [-75.57264377079262, 6.300527487222188], "type": "Point"}, "id": "234", "properties": {"NOMBRE": "CC", "Promedio": "19.0 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "1635 msnm", "codigoSeri": "146"}, "type": "Feature"}, {"bbox": [-75.60633167624472, 6.176918293105644, -75.60633167624472, 6.176918293105644], "geometry": {"coordinates": [-75.60633167624472, 6.176918293105644], "type": "Point"}, "id": "235", "properties": {"NOMBRE": "CC", "Promedio": "nan $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1462 msnm", "codigoSeri": "175"}, "type": "Feature"}, {"bbox": [-75.53677193820477, 6.120345239083444, -75.53677193820477, 6.120345239083444], "geometry": {"coordinates": [-75.53677193820477, 6.120345239083444], "type": "Point"}, "id": "236", "properties": {"NOMBRE": "CC", "Promedio": "20.5 $\\mu g/m^3$", "alturaNi_1": "2 m", "alturaNive": "2534 msnm", "codigoSeri": "179"}, "type": "Feature"}, {"bbox": [-75.63239265880837, 6.174909462972628, -75.63239265880837, 6.174909462972628], "geometry": {"coordinates": [-75.63239265880837, 6.174909462972628], "type": "Point"}, "id": "237", "properties": {"NOMBRE": "CC", "Promedio": "14.5 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1600 msnm", "codigoSeri": "177"}, "type": "Feature"}, {"bbox": [-75.57389, 6.22356, -75.57389, 6.22356], "geometry": {"coordinates": [-75.57389, 6.22356], "type": "Point"}, "id": "238", "properties": {"NOMBRE": "CC", "Promedio": "17.6 $\\mu g/m^3$", "alturaNi_1": "15 m", "alturaNive": "1617 msnm", "codigoSeri": "252"}, "type": "Feature"}, {"bbox": [-75.36333, 6.40722, -75.36333, 6.40722], "geometry": {"coordinates": [-75.36333, 6.40722], "type": "Point"}, "id": "239", "properties": {"NOMBRE": "CC", "Promedio": "17.2 $\\mu g/m^3$", "alturaNi_1": "3 m", "alturaNive": "1618 msnm", "codigoSeri": "234"}, "type": "Feature"}, {"bbox": [-75.538434907794, 6.29775107449704, -75.538434907794, 6.29775107449704], "geometry": {"coordinates": [-75.538434907794, 6.29775107449704], "type": "Point"}, "id": "240", "properties": {"NOMBRE": "CC", "Promedio": "13.8 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1688 msnm", "codigoSeri": "135"}, "type": "Feature"}, {"bbox": [-75.57402547448872, 6.242201530994388, -75.57402547448872, 6.242201530994388], "geometry": {"coordinates": [-75.57402547448872, 6.242201530994388], "type": "Point"}, "id": "241", "properties": {"NOMBRE": "CC", "Promedio": "16.5 $\\mu g/m^3$", "alturaNi_1": "12 m", "alturaNive": "1472 msnm", "codigoSeri": "195"}, "type": "Feature"}, {"bbox": [-75.57984050363301, 6.241433634133267, -75.57984050363301, 6.241433634133267], "geometry": {"coordinates": [-75.57984050363301, 6.241433634133267], "type": "Point"}, "id": "242", "properties": {"NOMBRE": "CC", "Promedio": "22.2 $\\mu g/m^3$", "alturaNi_1": "6 m", "alturaNive": "1521 msnm", "codigoSeri": "107"}, "type": "Feature"}, {"bbox": [-75.59309328298694, 6.273629008940872, -75.59309328298694, 6.273629008940872], "geometry": {"coordinates": [-75.59309328298694, 6.273629008940872], "type": "Point"}, "id": "243", "properties": {"NOMBRE": "CC", "Promedio": "nan $\\mu g/m^3$", "alturaNi_1": "6 m", "alturaNive": "1600 msnm", "codigoSeri": "81"}, "type": "Feature"}, {"bbox": [-75.57533, 6.25185, -75.57533, 6.25185], "geometry": {"coordinates": [-75.57533, 6.25185], "type": "Point"}, "id": "244", "properties": {"NOMBRE": "CC", "Promedio": "nan $\\mu g/m^3$", "alturaNi_1": "6 m", "alturaNive": "1507 msnm", "codigoSeri": "169"}, "type": "Feature"}, {"bbox": [-75.60207226677448, 6.220400870390428, -75.60207226677448, 6.220400870390428], "geometry": {"coordinates": [-75.60207226677448, 6.220400870390428], "type": "Point"}, "id": "245", "properties": {"NOMBRE": "CC", "Promedio": "19.2 $\\mu g/m^3$", "alturaNi_1": "24 m", "alturaNive": "1571 msnm", "codigoSeri": "104"}, "type": "Feature"}, {"bbox": [-75.64702, 6.15419, -75.64702, 6.15419], "geometry": {"coordinates": [-75.64702, 6.15419], "type": "Point"}, "id": "246", "properties": {"NOMBRE": "CC", "Promedio": "21.7 $\\mu g/m^3$", "alturaNi_1": "1 m", "alturaNive": "1821 msnm", "codigoSeri": "94"}, "type": "Feature"}, {"bbox": [-75.53265, 6.34796, -75.53265, 6.34796], "geometry": {"coordinates": [-75.53265, 6.34796], "type": "Point"}, "id": "247", "properties": {"NOMBRE": "CC", "Promedio": "nan $\\mu g/m^3$", "alturaNi_1": "6 m", "alturaNive": "1477 msnm", "codigoSeri": "236"}, "type": "Feature"}, {"bbox": [-75.63782144985453, 6.082466713909932, -75.63782144985453, 6.082466713909932], "geometry": {"coordinates": [-75.63782144985453, 6.082466713909932], "type": "Point"}, "id": "248", "properties": {"NOMBRE": "CC", "Promedio": "7.4 $\\mu g/m^3$", "alturaNi_1": "4 m", "alturaNive": "1848 msnm", "codigoSeri": "165"}, "type": "Feature"}, {"bbox": [-75.60201932392373, 6.2561098921442415, -75.60201932392373, 6.2561098921442415], "geometry": {"coordinates": [-75.60201932392373, 6.2561098921442415], "type": "Point"}, "id": "249", "properties": {"NOMBRE": "CC", "Promedio": "18.0 $\\mu g/m^3$", "alturaNi_1": "19 m", "alturaNive": "1544 msnm", "codigoSeri": "203"}, "type": "Feature"}], "type": "FeatureCollection"});
+        
+    
+            var mouse_position_c633c876e9104708a80b514efaf95e89 = new L.Control.MousePosition(
+                {"emptyString": "Unavailable", "lngFirst": false, "numDigits": 5, "position": "bottomright", "prefix": "Mouse:", "separator": " | "}
+            );
+            mouse_position_c633c876e9104708a80b514efaf95e89.options["latFormatter"] =
+                function(num) {return L.Util.formatNum(num, 3) + ' º ';};;
+            mouse_position_c633c876e9104708a80b514efaf95e89.options["lngFormatter"] =
+                function(num) {return L.Util.formatNum(num, 3) + ' º ';};;
+            map_99f912b68a704f0e8bdeca413c65c5c0.addControl(mouse_position_c633c876e9104708a80b514efaf95e89);
+        
+    
+            var options = {
+              position: "topleft",
+              draw: {"polyline": {"allowIntersection": false}},
+              edit: {"poly": {"allowIntersection": false}},
+            }
+            // FeatureGroup is to store editable layers.
+            var drawnItems = new L.featureGroup().addTo(
+                map_99f912b68a704f0e8bdeca413c65c5c0
+            );
+            options.edit.featureGroup = drawnItems;
+            var draw_control_751541f10e6c4750a0b44bd354cb0c02 = new L.Control.Draw(
+                options
+            ).addTo( map_99f912b68a704f0e8bdeca413c65c5c0 );
+            map_99f912b68a704f0e8bdeca413c65c5c0.on(L.Draw.Event.CREATED, function(e) {
+                var layer = e.layer,
+                    type = e.layerType;
+                var coords = JSON.stringify(layer.toGeoJSON());
+                layer.on('click', function() {
+                    alert(coords);
+                    console.log(coords);
+                });
+                drawnItems.addLayer(layer);
+             });
+            map_99f912b68a704f0e8bdeca413c65c5c0.on('draw:created', function(e) {
+                drawnItems.addLayer(e.layer);
+            });
+            
+        
+    
+            var geo_json_00fc93ab975943688065eb402b9ee68fsearchControl = new L.Control.Search({
+                layer: geo_json_00fc93ab975943688065eb402b9ee68f,
+                
+                propertyName: 'codigoSeri',
+                
+                collapsed: true,
+                textPlaceholder: 'Buscar NOMBRE de la estacion',
+                position:'topleft',                
+            
+                initial: false,
+                
+                zoom: 13,
+                
+                hideMarkerOnCollapse: true
+            
+                });
+                geo_json_00fc93ab975943688065eb402b9ee68fsearchControl.on('search:locationfound', function(e) {
+                    geo_json_00fc93ab975943688065eb402b9ee68f.setStyle(function(feature){
+                        return feature.properties.style
+                    })
+                    
+                    if(e.layer._popup)
+                        e.layer.openPopup();
+                })
+                geo_json_00fc93ab975943688065eb402b9ee68fsearchControl.on('search:collapsed', function(e) {
+                        geo_json_00fc93ab975943688065eb402b9ee68f.setStyle(function(feature){
+                            return feature.properties.style
+                    });
+                });
+            map_99f912b68a704f0e8bdeca413c65c5c0.addControl( geo_json_00fc93ab975943688065eb402b9ee68fsearchControl );
+
+        
+    
+            L.control.fullscreen(
+                {"forceSeparateButton": true, "position": "topright", "title": "Pantalla completa", "titleCancel": "Salir"}
+            ).addTo(map_99f912b68a704f0e8bdeca413c65c5c0);
+        
+    
+            var layer_control_657094d11a434f2da24f677564817bb1 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_2a9ac694f1a2433cbddf5c49b08473c5,
+                    "World Street Map - Arcgis" : tile_layer_27944a7f6812490eb963d0a3236b01c7,
+                    "Satelital" : tile_layer_9d4b09fedd4f4b0898d749019e6dda52,
+                },
+                overlays :  {
+                    "Ciudadanos Cient\u00edficos" : feature_group_3a30bdd0c4c94eab97f8aab97fd6d69e,
+                    "Area de Itag\u00fc\u00ed" : geo_json_48934e9f405b492598723b5e56798100,
+                    "" : geo_json_00fc93ab975943688065eb402b9ee68f,
+                },
+            };
+            L.control.layers(
+                layer_control_657094d11a434f2da24f677564817bb1.base_layers,
+                layer_control_657094d11a434f2da24f677564817bb1.overlays,
+                {"autoZIndex": true, "collapsed": false, "position": "topright"}
+            ).addTo(map_99f912b68a704f0e8bdeca413c65c5c0);
+            tile_layer_27944a7f6812490eb963d0a3236b01c7.remove();
+            tile_layer_9d4b09fedd4f4b0898d749019e6dda52.remove();
+            geo_json_00fc93ab975943688065eb402b9ee68f.remove();
+        
+    
+            var measure_control_eac424f912114519aadc28d132f04458 = new L.Control.Measure(
+                {"position": "topright", "primaryAreaUnit": "sqmeters", "primaryLengthUnit": "meters", "secondaryAreaUnit": "acres", "secondaryLengthUnit": "kilometers"});
+            map_99f912b68a704f0e8bdeca413c65c5c0.addControl(measure_control_eac424f912114519aadc28d132f04458);
+
+        
+</script>
