@@ -99,27 +99,27 @@ end
 ```
 
 <div>
-<iframe frameborder="0" src="https://dparraho.github.io/Catalogo_CC" width="750" height="600">
+<iframe frameborder="0" src="https://dparraho.github.io/Catalogo_CC" width="750" height="450">
 </iframe>
 </div>
 
 <div>
-<iframe frameborder="0" src="https://dparraho.github.io/CD1" width="750" height="600">
+<iframe frameborder="0" src="https://dparraho.github.io/CD1" width="750" height="450">
 </iframe>
 </div>
 
 <div>
-<iframe frameborder="0" src="https://dparraho.github.io/CD2" width="750" height="600">
+<iframe frameborder="0" src="https://dparraho.github.io/CD2" width="750" height="450">
 </iframe>
 </div>
 
 <div>
-<iframe frameborder="0" src="https://dparraho.github.io/cuadritos" width="750" height="1800">
+<iframe frameborder="0" src="https://dparraho.github.io/cuadritos" width="750" height="1350">
 </iframe>
 </div>
 
 <div>
-<iframe frameborder="0" src="https://dparraho.github.io/CA" width="750" height="600">
+<iframe frameborder="0" src="https://dparraho.github.io/CA" width="750" height="450">
 </iframe>
 </div>
 
