@@ -1,6 +1,7 @@
 title: Informe Interactivo CC
 description: Este es el primer intento de un informe interactivo para el proyecto, se busca finalmente que este sea accesible desde cualquier navegador. 
 theme: jekyll-theme-minimal
+github: is\_project\_page:false
 google_analytics:
 plugins:
   - jekyll-paginate
